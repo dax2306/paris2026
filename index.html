@@ -19,13 +19,9 @@
       --shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -36,15 +32,9 @@
       line-height: 1.5;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    a { color: inherit; text-decoration: none; }
 
-    img {
-      display: block;
-      width: 100%;
-    }
+    img { display: block; width: 100%; }
 
     .page {
       width: min(100%, 1100px);
@@ -90,7 +80,7 @@
 
     .hero-subtitle {
       margin: 24px 0 0;
-      max-width: 570px;
+      max-width: 620px;
       font-size: clamp(17px, 2.5vw, 23px);
       line-height: 1.35;
       color: rgba(255, 255, 255, 0.9);
@@ -179,7 +169,7 @@
     }
 
     .section-note {
-      max-width: 370px;
+      max-width: 390px;
       margin: 0;
       color: var(--muted);
       font-size: 15px;
@@ -199,9 +189,7 @@
       box-shadow: 0 7px 24px rgba(0, 0, 0, 0.045);
     }
 
-    .card-content {
-      padding: 22px;
-    }
+    .card-content { padding: 22px; }
 
     .card-label {
       margin-bottom: 7px;
@@ -241,12 +229,18 @@
       font-weight: 650;
     }
 
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
     .button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
       min-height: 44px;
-      margin-top: 18px;
       padding: 0 16px;
       border-radius: 999px;
       background: var(--text);
@@ -255,10 +249,12 @@
       font-weight: 700;
     }
 
-    .day-list {
-      display: grid;
-      gap: 12px;
+    .button.secondary {
+      background: #ececef;
+      color: #222;
     }
+
+    .day-list { display: grid; gap: 12px; }
 
     .day {
       display: grid;
@@ -283,10 +279,7 @@
       letter-spacing: -0.03em;
     }
 
-    .day p {
-      margin: 7px 0 0;
-      color: var(--muted);
-    }
+    .day p { margin: 7px 0 0; color: var(--muted); }
 
     .route {
       padding: 24px;
@@ -295,9 +288,7 @@
       color: white;
     }
 
-    .route + .route {
-      margin-top: 12px;
-    }
+    .route + .route { margin-top: 12px; }
 
     .route-number {
       color: rgba(255, 255, 255, 0.58);
@@ -368,52 +359,24 @@
     }
 
     @media (max-width: 760px) {
-      .page {
-        padding: 8px 8px 105px;
-      }
-
-      .hero {
-        min-height: 610px;
-        border-radius: 25px;
-      }
-
-      .hero-content {
-        padding: 26px 20px;
-      }
-
-      .quick-nav {
-        grid-template-columns: repeat(2, 1fr);
-        margin-top: 12px;
-      }
-
-      .section-heading {
-        display: block;
-      }
-
-      .section-note {
-        margin-top: 12px;
-      }
-
-      .cards {
-        grid-template-columns: 1fr;
-      }
-
-      .day {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
+      .page { padding: 8px 8px 105px; }
+      .hero { min-height: 610px; border-radius: 25px; }
+      .hero-content { padding: 26px 20px; }
+      .quick-nav { grid-template-columns: repeat(2, 1fr); margin-top: 12px; }
+      .section-heading { display: block; }
+      .section-note { margin-top: 12px; }
+      .cards { grid-template-columns: 1fr; }
+      .day { grid-template-columns: 1fr; gap: 8px; }
     }
   </style>
 </head>
 
 <body>
-
   <main class="page">
 
     <header class="hero" id="home">
       <div class="hero-content">
         <p class="eyebrow">Personal travel companion</p>
-
         <h1>Paris<br>2026</h1>
 
         <p class="hero-subtitle">
@@ -465,15 +428,11 @@
       </div>
 
       <div class="day-list">
-
         <article class="day">
           <div class="day-date">Sabato 8</div>
           <div>
             <h3>Arrivo e Rive Gauche</h3>
-            <p>
-              Jardin du Luxembourg, ping pong, passeggiata tra Saint-Germain,
-              Île de la Cité e lungosenna al tramonto.
-            </p>
+            <p>Jardin du Luxembourg, ping pong, Saint-Germain, Île de la Cité e Senna al tramonto.</p>
           </div>
         </article>
 
@@ -481,10 +440,7 @@
           <div class="day-date">Domenica 9</div>
           <div>
             <h3>Mercatini e Marais</h3>
-            <p>
-              Mattina alle Puces de Vanves, pranzo street food e pomeriggio
-              tra cortili, negozi vintage e Place des Vosges.
-            </p>
+            <p>Puces de Vanves, pranzo street food, cortili, negozi vintage e Place des Vosges.</p>
           </div>
         </article>
 
@@ -492,10 +448,7 @@
           <div class="day-date">Lunedì 10</div>
           <div>
             <h3>Bois de Boulogne e Gehry</h3>
-            <p>
-              Fondation Louis Vuitton, passeggiata nel verde e serata rilassata
-              tra Canal Saint-Martin e République.
-            </p>
+            <p>Fondation Louis Vuitton, passeggiata nel verde e serata tra Canal Saint-Martin e République.</p>
           </div>
         </article>
 
@@ -503,10 +456,7 @@
           <div class="day-date">Martedì 11</div>
           <div>
             <h3>La Villette per Arturo</h3>
-            <p>
-              Cité des Sciences, Parc de la Villette, architettura contemporanea
-              e passeggiata lungo il Bassin de la Villette.
-            </p>
+            <p>Cité des Sciences, Parc de la Villette e Bassin de la Villette.</p>
           </div>
         </article>
 
@@ -514,10 +464,7 @@
           <div class="day-date">Mercoledì 12</div>
           <div>
             <h3>Design e passaggi coperti</h3>
-            <p>
-              Musée des Arts Décoratifs, Palais-Royal, Galerie Vivienne
-              e architetture nascoste nel centro di Parigi.
-            </p>
+            <p>Musée des Arts Décoratifs, Palais-Royal e Galerie Vivienne.</p>
           </div>
         </article>
 
@@ -525,10 +472,7 @@
           <div class="day-date">Giovedì 13</div>
           <div>
             <h3>Saint-Ouen e Montmartre</h3>
-            <p>
-              Mercati Paul Bert e Serpette, arredi e modernariato,
-              poi Montmartre attraverso le strade meno turistiche.
-            </p>
+            <p>Paul Bert Serpette, Vernaison e Montmartre attraverso le strade meno turistiche.</p>
           </div>
         </article>
 
@@ -536,25 +480,22 @@
           <div class="day-date">Venerdì 14</div>
           <div>
             <h3>Parigi lenta</h3>
-            <p>
-              Marché d’Aligre, picnic, Coulée Verte e una cena finale
-              in un bistrot francese informale.
-            </p>
+            <p>Marché d’Aligre, picnic, Coulée Verte e cena finale informale.</p>
           </div>
         </article>
-
       </div>
     </section>
 
     <section id="food">
       <div class="section-heading">
         <div>
-          <p class="section-kicker">Street food e bistrot</p>
+          <p class="section-kicker">Pranzi, cene e street food</p>
           <h2>Dove mangiare</h2>
         </div>
 
         <p class="section-note">
-          Indirizzi informali, adatti a una famiglia e con prezzi generalmente accessibili.
+          Posti piacevoli, informali e facili da raggiungere durante le vostre giornate.
+          Ogni scheda include mappa, fascia di prezzo e sito quando disponibile.
         </p>
       </div>
 
@@ -562,85 +503,220 @@
 
         <article class="card">
           <div class="card-content">
-            <div class="card-label">Marais · Street food</div>
-            <h3>L’As du Fallafel</h3>
-            <p>
-              Il grande classico di Rue des Rosiers. Falafel abbondante,
-              veloce e perfetto durante la passeggiata nel Marais.
-            </p>
+            <div class="card-label">Marais · Pranzo veloce</div>
+            <h3>Miznon</h3>
+            <p>Street food israeliano in un locale vivace e informale. Pita farcite e verdure arrostite.</p>
             <div class="card-meta">
-              <span class="tag">€</span>
-              <span class="tag">Falafel</span>
-              <span class="tag">Adatto ad Arturo</span>
-            </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=L%27As+du+Fallafel+Paris"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="card-content">
-            <div class="card-label">Marais · Mercato</div>
-            <h3>Marché des Enfants Rouges</h3>
-            <p>
-              Piccolo mercato coperto con cucina marocchina, asiatica,
-              italiana e francese. Meglio arrivare prima delle 12:30.
-            </p>
-            <div class="card-meta">
-              <span class="tag">€€</span>
-              <span class="tag">Scelta ampia</span>
+              <span class="tag">€ · 10–20 €</span>
+              <span class="tag">Street food</span>
               <span class="tag">Pranzo</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+des+Enfants+Rouges+Paris"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Miznon+22+Rue+des+Ecouffes+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.miznonparis.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
           </div>
         </article>
 
         <article class="card">
           <div class="card-content">
-            <div class="card-label">Saint-Germain · Ramen</div>
-            <h3>Kodawari Ramen</h3>
-            <p>
-              Ramen molto curato in un ambiente scenografico.
-              Una cena divertente anche per un bambino.
-            </p>
+            <div class="card-label">Marais · Pranzo veloce</div>
+            <h3>L’As du Fallafel</h3>
+            <p>Il classico di Rue des Rosiers: falafel abbondante, servizio rapido e atmosfera animata.</p>
             <div class="card-meta">
-              <span class="tag">€€</span>
+              <span class="tag">€ · 10–20 €</span>
+              <span class="tag">Falafel</span>
+              <span class="tag">Da asporto</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=L%27As+du+Fallafel+34+Rue+des+Rosiers+Paris" target="_blank" rel="noopener">Google Maps</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Marais · Mercato coperto</div>
+            <h3>Marché des Enfants Rouges</h3>
+            <p>Mercato storico con banchi marocchini, asiatici, francesi e mediterranei.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 15–25 €</span>
+              <span class="tag">Molte cucine</span>
+              <span class="tag">Pranzo</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+des+Enfants+Rouges+Paris" target="_blank" rel="noopener">Google Maps</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Marais · Pranzo</div>
+            <h3>Breizh Café</h3>
+            <p>Crêperie contemporanea, curata e adatta anche ad Arturo. Galette bretoni e sidro.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 20–30 €</span>
+              <span class="tag">Galette</span>
+              <span class="tag">Prenotabile</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Breizh+Caf%C3%A9+Marais+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.breizhcafe.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Saint-Germain · Pranzo o cena</div>
+            <h3>Kodawari Ramen Yokocho</h3>
+            <p>Ramen artigianale in un ambiente immersivo che ricrea una piccola strada di Tokyo.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 20–30 €</span>
               <span class="tag">Ramen</span>
-              <span class="tag">Possibile attesa</span>
+              <span class="tag">Scenografico</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Paris"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Yokocho+29+Rue+Mazarine+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.kodawari-ramen.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
           </div>
         </article>
 
         <article class="card">
           <div class="card-content">
-            <div class="card-label">République · Francese</div>
-            <h3>Bouillon République</h3>
-            <p>
-              Piatti francesi semplici e prezzi contenuti.
-              Buona soluzione per una cena senza formalità.
-            </p>
+            <div class="card-label">Palais-Royal · Pranzo o cena</div>
+            <h3>Kodawari Ramen Tsukiji</h3>
+            <p>Sede ispirata al mercato del pesce di Tokyo, comoda per Palais-Royal e Galerie Vivienne.</p>
             <div class="card-meta">
-              <span class="tag">€€</span>
-              <span class="tag">Cucina francese</span>
-              <span class="tag">Famiglie</span>
+              <span class="tag">€€ · 20–30 €</span>
+              <span class="tag">Ramen</span>
+              <span class="tag">Possibile coda</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=Bouillon+R%C3%A9publique+Paris"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Tsukiji+12+Rue+de+Richelieu+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.kodawari-ramen.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Musée d’Orsay · Bistrot</div>
+            <h3>Les Antiquaires</h3>
+            <p>Bistrot parigino caldo e accogliente, perfetto dopo il Musée d’Orsay.</p>
+            <div class="card-meta">
+              <span class="tag">€€€ · 30–50 €</span>
+              <span class="tag">Francese</span>
+              <span class="tag">Pranzo o cena</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Les+Antiquaires+13+Rue+du+Bac+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://lesantiquaires.net/" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">République · Cena francese</div>
+            <h3>Bouillon République</h3>
+            <p>Grande brasserie vivace, cucina francese tradizionale e prezzi contenuti.</p>
+            <div class="card-meta">
+              <span class="tag">€ · 12–25 €</span>
+              <span class="tag">Francese</span>
+              <span class="tag">Informale</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Bouillon+R%C3%A9publique+39+Boulevard+du+Temple+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://bouillonlesite.com/bouillon-republique" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Pigalle · Pranzo o cena</div>
+            <h3>Bouillon Pigalle</h3>
+            <p>Brasserie su due livelli, molto animata. Perfetta dopo Montmartre.</p>
+            <div class="card-meta">
+              <span class="tag">€ · 12–25 €</span>
+              <span class="tag">Francese</span>
+              <span class="tag">Atmosfera vivace</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Bouillon+Pigalle+22+Boulevard+de+Clichy+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://bouillonlesite.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Faubourg Saint-Denis · Cena</div>
+            <h3>Bouillon Julien</h3>
+            <p>Uno degli interni Art Nouveau più belli tra i ristoranti parigini.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 20–35 €</span>
+              <span class="tag">Art Nouveau</span>
+              <span class="tag">Francese</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Bouillon+Julien+16+Rue+du+Faubourg+Saint-Denis+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.bouillon-julien.com/" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Canal Saint-Martin · Pranzo o cena</div>
+            <h3>Gros Bao</h3>
+            <p>Grande cantina cinese contemporanea sul canale, colorata e informale.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 20–35 €</span>
+              <span class="tag">Cinese</span>
+              <span class="tag">Piatti condivisi</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Gros+Bao+72+Quai+de+Jemmapes+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.baofamily.co/grosbao" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Bastille · Pranzo</div>
+            <h3>Petit Bao Bastille</h3>
+            <p>Cantina cinese pop, informale e molto piacevole per un pranzo in famiglia.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 18–30 €</span>
+              <span class="tag">Bao e dim sum</span>
+              <span class="tag">Arturo-friendly</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Petit+Bao+Bastille+10+Rue+Breguet+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.baofamily.co/petitbao-bastille" target="_blank" rel="noopener">Sito</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-content">
+            <div class="card-label">Saint-Lazare · Pranzo o cena</div>
+            <h3>Bleu Bao</h3>
+            <p>Dim sum e cocktail in un ambiente ispirato alle case tradizionali cinesi.</p>
+            <div class="card-meta">
+              <span class="tag">€€ · 25–40 €</span>
+              <span class="tag">Dim sum</span>
+              <span class="tag">Molto curato</span>
+            </div>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Bleu+Bao+8+Rue+Saint-Lazare+Paris" target="_blank" rel="noopener">Google Maps</a>
+              <a class="button secondary" href="https://www.baofamily.co/bleu-bao" target="_blank" rel="noopener">Sito</a>
+            </div>
           </div>
         </article>
 
@@ -660,25 +736,19 @@
       </div>
 
       <div class="cards">
-
         <article class="card">
           <div class="card-content">
             <div class="card-label">Porte de Vanves</div>
             <h3>Puces de Vanves</h3>
-            <p>
-              Mercato autentico e più abbordabile di Saint-Ouen.
-              Stampe, lampade, ceramiche, piccoli mobili e oggetti curiosi.
-            </p>
+            <p>Mercato autentico e accessibile: stampe, lampade, ceramiche e piccoli mobili.</p>
             <div class="card-meta">
               <span class="tag">Mattina presto</span>
               <span class="tag">Usato</span>
               <span class="tag">Buoni prezzi</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Vanves"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Vanves" target="_blank" rel="noopener">Google Maps</a>
+            </div>
           </div>
         </article>
 
@@ -686,20 +756,15 @@
           <div class="card-content">
             <div class="card-label">Saint-Ouen</div>
             <h3>Marché Paul Bert Serpette</h3>
-            <p>
-              La zona più interessante per mobili, illuminazione,
-              modernariato e pezzi di design del Novecento.
-            </p>
+            <p>La zona più interessante per mobili, illuminazione e design del Novecento.</p>
             <div class="card-meta">
               <span class="tag">Design</span>
               <span class="tag">Mobilio</span>
               <span class="tag">Prezzi medio-alti</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+Paul+Bert+Serpette"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+Paul+Bert+Serpette" target="_blank" rel="noopener">Google Maps</a>
+            </div>
           </div>
         </article>
 
@@ -707,20 +772,15 @@
           <div class="card-content">
             <div class="card-label">Saint-Ouen</div>
             <h3>Marché Vernaison</h3>
-            <p>
-              Più labirintico e informale. Interessante per oggetti,
-              insegne, decorazione, piccoli arredi e curiosità.
-            </p>
+            <p>Più labirintico e informale: insegne, piccoli arredi e curiosità.</p>
             <div class="card-meta">
               <span class="tag">Antiquariato</span>
               <span class="tag">Atmosfera</span>
               <span class="tag">Scoperte</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+Vernaison+Saint-Ouen"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+Vernaison+Saint-Ouen" target="_blank" rel="noopener">Google Maps</a>
+            </div>
           </div>
         </article>
 
@@ -728,23 +788,17 @@
           <div class="card-content">
             <div class="card-label">Bastille</div>
             <h3>Marché d’Aligre</h3>
-            <p>
-              Mercato alimentare e dell’usato molto vivo.
-              Ideale da abbinare a una passeggiata nel quartiere.
-            </p>
+            <p>Mercato alimentare e dell’usato molto vivo, ideale per fotografie e oggetti curiosi.</p>
             <div class="card-meta">
               <span class="tag">Popolare</span>
               <span class="tag">Mercato misto</span>
               <span class="tag">Fotogenico</span>
             </div>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+d%27Aligre+Paris"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=March%C3%A9+d%27Aligre+Paris" target="_blank" rel="noopener">Google Maps</a>
+            </div>
           </div>
         </article>
-
       </div>
     </section>
 
@@ -763,60 +817,44 @@
       <article class="route">
         <div class="route-number">Run 01 · Il classico</div>
         <h3>Pont du Carrousel → Tour Eiffel</h3>
-        <p>
-          Senna, Musée d’Orsay, Pont Alexandre III, Champ-de-Mars e ritorno.
-          Il percorso più monumentale.
-        </p>
+        <p>Senna, Musée d’Orsay, Pont Alexandre III, Champ-de-Mars e ritorno.</p>
         <div class="card-meta">
           <span class="tag">10 km circa</span>
           <span class="tag">Pianeggiante</span>
           <span class="tag">Panoramico</span>
         </div>
-        <a class="button"
-           href="https://www.google.com/maps/dir/Pont+du+Carrousel,+Paris/Tour+Eiffel,+Paris/Pont+du+Carrousel,+Paris"
-           target="_blank" rel="noopener">
-          Apri il percorso
-        </a>
+        <div class="button-row">
+          <a class="button" href="https://www.google.com/maps/dir/Pont+du+Carrousel,+Paris/Tour+Eiffel,+Paris/Pont+du+Carrousel,+Paris" target="_blank" rel="noopener">Apri il percorso</a>
+        </div>
       </article>
 
       <article class="route">
         <div class="route-number">Run 02 · Parigi antica</div>
         <h3>Luxembourg → Île Saint-Louis → Jardin des Plantes</h3>
-        <p>
-          Quartiere Latino, Notre-Dame, banchine dell’Île Saint-Louis
-          e ritorno lungo la Rive Gauche.
-        </p>
+        <p>Quartiere Latino, Notre-Dame, Île Saint-Louis e Rive Gauche.</p>
         <div class="card-meta">
           <span class="tag">9–11 km</span>
           <span class="tag">Pianeggiante</span>
           <span class="tag">Alba consigliata</span>
         </div>
-        <a class="button"
-           href="https://www.google.com/maps/dir/Jardin+du+Luxembourg,+Paris/%C3%8Ele+Saint-Louis,+Paris/Jardin+des+Plantes,+Paris/Jardin+du+Luxembourg,+Paris"
-           target="_blank" rel="noopener">
-          Apri il percorso
-        </a>
+        <div class="button-row">
+          <a class="button" href="https://www.google.com/maps/dir/Jardin+du+Luxembourg,+Paris/%C3%8Ele+Saint-Louis,+Paris/Jardin+des+Plantes,+Paris/Jardin+du+Luxembourg,+Paris" target="_blank" rel="noopener">Apri il percorso</a>
+        </div>
       </article>
 
       <article class="route">
         <div class="route-number">Run 03 · Architettura e verde</div>
         <h3>Coulée Verte René-Dumont</h3>
-        <p>
-          Un percorso lineare sopra e sotto il Viaduc des Arts,
-          tra vegetazione, passerelle e riuso urbano.
-        </p>
+        <p>Un percorso lineare sopra e sotto il Viaduc des Arts, tra vegetazione e riuso urbano.</p>
         <div class="card-meta">
           <span class="tag">8–10 km</span>
           <span class="tag">Percorso lineare</span>
           <span class="tag">Architettura</span>
         </div>
-        <a class="button"
-           href="https://www.google.com/maps/search/?api=1&query=Coul%C3%A9e+Verte+Ren%C3%A9-Dumont"
-           target="_blank" rel="noopener">
-          Apri in Google Maps
-        </a>
+        <div class="button-row">
+          <a class="button" href="https://www.google.com/maps/search/?api=1&query=Coul%C3%A9e+Verte+Ren%C3%A9-Dumont" target="_blank" rel="noopener">Google Maps</a>
+        </div>
       </article>
-
     </section>
 
     <section id="arturo">
@@ -827,20 +865,16 @@
         </div>
 
         <p class="section-note">
-          Piccole esperienze da alternare alle visite di architettura e design.
+          Esperienze da alternare alle visite di architettura e design.
         </p>
       </div>
 
       <div class="cards">
-
         <article class="card">
           <div class="card-content">
             <div class="card-label">Jardin du Luxembourg</div>
             <h3>Ping pong e velieri</h3>
-            <p>
-              Una pausa quotidiana vicino a casa, tra tavoli da ping pong,
-              giochi e barchette nel bacino centrale.
-            </p>
+            <p>Una pausa quotidiana vicino a casa, tra tavoli da ping pong, giochi e barchette.</p>
           </div>
         </article>
 
@@ -848,25 +882,18 @@
           <div class="card-content">
             <div class="card-label">Parc de la Villette</div>
             <h3>Cité des Sciences</h3>
-            <p>
-              Esperimenti, tecnologia, spazio e attività interattive.
-              Una delle giornate più adatte a un bambino della sua età.
-            </p>
-            <a class="button"
-               href="https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+des+Sciences+et+de+l%27Industrie"
-               target="_blank" rel="noopener">
-              Apri in Google Maps
-            </a>
+            <p>Esperimenti, tecnologia, spazio e attività interattive.</p>
+            <div class="button-row">
+              <a class="button" href="https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+des+Sciences+et+de+l%27Industrie" target="_blank" rel="noopener">Google Maps</a>
+            </div>
           </div>
         </article>
-
       </div>
     </section>
 
     <footer>
       Paris 2026 · Daniele, Margherita e Arturo
     </footer>
-
   </main>
 
   <nav class="bottom-nav" aria-label="Navigazione mobile">
@@ -876,6 +903,5 @@
     <a href="#vintage"><span>🪑</span>Vintage</a>
     <a href="#running"><span>🏃</span>Run</a>
   </nav>
-
 </body>
 </html>
