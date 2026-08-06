@@ -14,75 +14,99 @@
       <div class="hero-content">
         <p class="eyebrow">Personal travel companion</p>
         <h1>Paris<br>2026</h1>
-        <p class="hero-subtitle">
-          Daniele · Margherita · Arturo · 8–14 agosto
-        </p>
+        <p class="hero-subtitle">Daniele · Margherita · Arturo · 8–14 agosto</p>
       </div>
     </header>
 
-    <nav class="quick-nav" aria-label="Sezioni principali">
-      <button class="quick-link" data-section="mostre"><span>🖼️</span>Mostre</button>
-      <button class="quick-link" data-section="food"><span>🍽️</span>Food</button>
-      <button class="quick-link" data-section="vintage"><span>🪑</span>Vintage</button>
-      <button class="quick-link" data-section="arturo"><span>🧗</span>Arturo</button>
+    <nav class="quick-nav">
+      <a class="quick-link" href="#mostre"><span>🖼️</span>Mostre</a>
+      <a class="quick-link" href="#food"><span>🍽️</span>Food</a>
+      <a class="quick-link" href="#vintage"><span>🪑</span>Vintage</a>
+      <a class="quick-link" href="#arturo"><span>🧗</span>Arturo</a>
     </nav>
 
-    <section class="toolbox" aria-label="Ricerca e posizione">
-      <div>
-        <p class="section-kicker">Esplora la guida</p>
-        <h2>Che cosa cerchiamo?</h2>
-      </div>
+    <section class="toolbox" id="strumenti">
+      <p class="section-kicker">Esplora la guida</p>
+      <h2>Che cosa cerchiamo?</h2>
 
       <label class="search-box">
         <span>🔍</span>
-        <input id="search-input" type="search"
-          placeholder="Ramen, bouillon, design, Arturo…"
-          autocomplete="off">
+        <input id="search-input" type="search" placeholder="Ramen, bouillon, design, Arturo…">
       </label>
 
       <div class="tool-actions">
-        <button id="nearby-button" class="primary-button" type="button">
-          📍 Vicino a me
-        </button>
-        <button id="reset-button" class="secondary-button" type="button">
-          Mostra tutto
-        </button>
+        <button id="nearby-button" class="primary-button">📍 Vicino a me</button>
+        <button id="reset-button" class="secondary-button">Azzera ricerca</button>
       </div>
 
-      <p id="status" class="status" aria-live="polite">
+      <p id="status" class="status">
         La posizione viene usata solo quando tocchi “Vicino a me” e non viene salvata.
       </p>
+
+      <div id="nearby-results" class="nearby-results" hidden>
+        <p class="section-kicker">Posizione attuale</p>
+        <h3>Più vicini a te</h3>
+        <div id="nearby-list" class="places-list"></div>
+      </div>
     </section>
 
-    <section id="results-section">
+    <section class="guide-section" id="mostre">
       <div class="section-heading">
-        <div>
-          <p class="section-kicker" id="results-kicker">Tutta la guida</p>
-          <h2 id="results-title">Luoghi selezionati</h2>
-        </div>
-        <p class="section-note" id="results-note">
-          Mappe, informazioni compatte e collegamenti diretti.
-        </p>
+        <div><p class="section-kicker">Arte, fotografia e architettura</p><h2>Mostre</h2></div>
+        <p class="section-note">Musei e fondazioni selezionati per il soggiorno.</p>
       </div>
-
       <div class="section-map-wrap">
-        <div id="map" class="section-map" aria-label="Mappa dei luoghi"></div>
-        <p id="map-status" class="map-status">Caricamento mappa…</p>
+        <div id="map-mostre" class="section-map"></div>
+        <p id="map-status-mostre" class="map-status"></p>
       </div>
+      <div id="list-mostre" class="places-list"></div>
+    </section>
 
-      <div id="filters" class="filters" aria-label="Filtri categorie"></div>
-      <div id="places-list" class="places-list"></div>
+    <section class="guide-section" id="food">
+      <div class="section-heading">
+        <div><p class="section-kicker">Pranzi, cene e street food</p><h2>Food</h2></div>
+        <p class="section-note">Ristoranti, brasserie, bouillons e indirizzi informali.</p>
+      </div>
+      <div class="section-map-wrap">
+        <div id="map-food" class="section-map"></div>
+        <p id="map-status-food" class="map-status"></p>
+      </div>
+      <div id="list-food" class="places-list"></div>
+    </section>
+
+    <section class="guide-section" id="vintage">
+      <div class="section-heading">
+        <div><p class="section-kicker">Mercatini e modernariato</p><h2>Vintage</h2></div>
+        <p class="section-note">Mercati, brocantes, mobilio e oggetti del Novecento.</p>
+      </div>
+      <div class="section-map-wrap">
+        <div id="map-vintage" class="section-map"></div>
+        <p id="map-status-vintage" class="map-status"></p>
+      </div>
+      <div id="list-vintage" class="places-list"></div>
+    </section>
+
+    <section class="guide-section" id="arturo">
+      <div class="section-heading">
+        <div><p class="section-kicker">Sport, gioco e avventura</p><h2>Arturo</h2></div>
+        <p class="section-note">Playground, arrampicata, scienza, animali e sport.</p>
+      </div>
+      <div class="section-map-wrap">
+        <div id="map-arturo" class="section-map"></div>
+        <p id="map-status-arturo" class="map-status"></p>
+      </div>
+      <div id="list-arturo" class="places-list"></div>
     </section>
 
     <footer>Paris 2026 · Daniele, Margherita e Arturo</footer>
   </main>
 
-  <nav class="bottom-nav" aria-label="Navigazione mobile">
-    <button data-section="all"><span>⌂</span>Tutto</button>
-    <button data-section="mostre"><span>🖼️</span>Mostre</button>
-    <button data-section="food"><span>🍽️</span>Food</button>
-    <button data-section="vintage"><span>🪑</span>Vintage</button>
-    <button data-section="arturo"><span>🧗</span>Arturo</button>
+  <nav class="bottom-nav">
+    <a href="#home"><span>⌂</span>Home</a>
+    <a href="#mostre"><span>🖼️</span>Mostre</a>
+    <a href="#food"><span>🍽️</span>Food</a>
+    <a href="#vintage"><span>🪑</span>Vintage</a>
+    <a href="#arturo"><span>🧗</span>Arturo</a>
   </nav>
 
   <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>

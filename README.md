@@ -10,4 +10,3 @@ File principali:
 - data/arturo.json
 
 La foto `Parigi-2-min.jpg` deve restare nella cartella principale del repository.
-Paris 2026 v2

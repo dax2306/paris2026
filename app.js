@@ -1,279 +1,120 @@
 
-const categories = {
-  all: { label: "Tutto", icon: "⌂" },
-  mostre: { label: "Mostre", icon: "🖼️" },
-  food: { label: "Food", icon: "🍽️" },
-  vintage: { label: "Vintage", icon: "🪑" },
-  arturo: { label: "Arturo", icon: "🧗" }
+const categories = ["mostre","food","vintage","arturo"];
+const data = {};
+const maps = {};
+const layers = {};
+let allPlaces = [];
+
+const search = document.getElementById("search-input");
+const status = document.getElementById("status");
+const nearbyBox = document.getElementById("nearby-results");
+const nearbyList = document.getElementById("nearby-list");
+
+async function start(){
+  for(const category of categories){
+    const r = await fetch(`data/${category}.json`);
+    data[category] = (await r.json()).map(x => ({...x,category}));
+  }
+  allPlaces = categories.flatMap(c => data[c]);
+  initMaps();
+  renderAll();
+}
+
+function initMaps(){
+  categories.forEach(category=>{
+    const map=L.map(`map-${category}`,{scrollWheelZoom:false}).setView([48.8566,2.3522],12);
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{
+      maxZoom:19,attribution:"&copy; OpenStreetMap"
+    }).addTo(map);
+    maps[category]=map;
+    layers[category]=L.layerGroup().addTo(map);
+  });
+}
+
+function text(place){
+  return [place.name,place.subtitle,place.description,...(place.tags||[])].join(" ").toLowerCase();
+}
+
+function createCard(place,withDistance=false){
+  const d=document.createElement("details");
+  d.className="place";
+  const s=document.createElement("summary");
+  s.innerHTML=`
+    <span class="place-summary">
+      <strong>${place.name}${place.tested?'<span class="tested">✓ Testato da noi</span>':""}</strong>
+      <small>${place.subtitle}${place.tags?.length?" · "+place.tags.slice(0,2).join(" · "):""}${withDistance?" · "+formatDistance(place.distance):""}</small>
+    </span>
+    <span class="chevron">⌄</span>`;
+  const b=document.createElement("div");
+  b.className="place-body";
+  b.innerHTML=`
+    <p>${place.description||""}</p>
+    <div class="tags">${(place.tags||[]).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+    <div class="link-row">${(place.links||[]).map(l=>`<a class="link-button ${l.kind==="site"?"secondary":""}" href="${l.url}" target="_blank" rel="noopener">${l.kind==="maps"?"Google Maps":l.label||"Sito"}</a>`).join("")}</div>`;
+  d.append(s,b);
+  return d;
+}
+
+function renderAll(){
+  const q=search.value.trim().toLowerCase();
+  categories.forEach(category=>{
+    const items=data[category].filter(p=>!q||text(p).includes(q));
+    const list=document.getElementById(`list-${category}`);
+    list.innerHTML="";
+    items.forEach(p=>list.appendChild(createCard(p)));
+    if(!items.length) list.innerHTML='<div class="nearby-empty">Nessun risultato.</div>';
+    updateMap(category,items);
+  });
+}
+
+function pin(n){
+  return L.divIcon({className:"",html:`<span class="paris-pin">${n}</span>`,iconSize:[30,30],iconAnchor:[15,15],popupAnchor:[0,-16]});
+}
+
+function updateMap(category,items){
+  layers[category].clearLayers();
+  const bounds=[];
+  let n=0;
+  items.forEach(p=>{
+    if(typeof p.lat!=="number"||typeof p.lon!=="number") return;
+    n++;
+    const m=L.marker([p.lat,p.lon],{icon:pin(n)});
+    const link=(p.links||[]).find(l=>l.kind==="maps")?.url||"#";
+    m.bindPopup(`<strong>${p.name}</strong><br><small>${p.subtitle}</small><br><br><a href="${link}" target="_blank">Apri in Google Maps</a>`);
+    layers[category].addLayer(m);
+    bounds.push([p.lat,p.lon]);
+  });
+  if(bounds.length) maps[category].fitBounds(bounds,{padding:[28,28],maxZoom:14});
+  document.getElementById(`map-status-${category}`).textContent=`${bounds.length} luoghi sulla mappa`;
+  setTimeout(()=>maps[category].invalidateSize(),100);
+}
+
+function km(a,b,c,d){
+  const r=x=>x*Math.PI/180,R=6371,dl=r(c-a),dn=r(d-b);
+  const x=Math.sin(dl/2)**2+Math.cos(r(a))*Math.cos(r(c))*Math.sin(dn/2)**2;
+  return R*2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+}
+function formatDistance(x){return x<1?`${Math.round(x*1000)} m`:`${x.toFixed(1)} km`}
+
+document.getElementById("nearby-button").onclick=()=>{
+  if(!navigator.geolocation){status.textContent="Geolocalizzazione non supportata.";return}
+  status.textContent="Ricerca della posizione in corso…";
+  navigator.geolocation.getCurrentPosition(pos=>{
+    const {latitude,longitude}=pos.coords;
+    const nearest=allPlaces.filter(p=>typeof p.lat==="number").map(p=>({...p,distance:km(latitude,longitude,p.lat,p.lon)})).sort((a,b)=>a.distance-b.distance).slice(0,12);
+    nearbyList.innerHTML="";
+    nearest.forEach(p=>nearbyList.appendChild(createCard(p,true)));
+    nearbyBox.hidden=false;
+    status.textContent="Posizione usata una sola volta. Nessun tracciamento continuo.";
+    document.getElementById("strumenti").scrollIntoView({behavior:"smooth"});
+  },()=>status.textContent="Non riesco a leggere la posizione.",{timeout:10000,maximumAge:120000});
 };
 
-let allPlaces = [];
-let activeCategory = "all";
-let map;
-let markerLayer;
-let userMarker;
+document.getElementById("reset-button").onclick=()=>{
+  search.value="";
+  nearbyBox.hidden=true;
+  renderAll();
+};
 
-const listNode = document.getElementById("places-list");
-const filtersNode = document.getElementById("filters");
-const searchNode = document.getElementById("search-input");
-const statusNode = document.getElementById("status");
-const mapStatusNode = document.getElementById("map-status");
-const titleNode = document.getElementById("results-title");
-const kickerNode = document.getElementById("results-kicker");
-const noteNode = document.getElementById("results-note");
-
-async function loadData() {
-  const entries = await Promise.all(
-    ["mostre", "food", "vintage", "arturo"].map(async category => {
-      const response = await fetch(`data/${category}.json`);
-      if (!response.ok) throw new Error(`Impossibile caricare ${category}`);
-      const data = await response.json();
-      return data.map(item => ({ ...item, category }));
-    })
-  );
-
-  allPlaces = entries.flat();
-  setupMap();
-  renderFilters();
-  render();
-}
-
-function setupMap() {
-  map = L.map("map", { scrollWheelZoom: false }).setView([48.8566, 2.3522], 12);
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 19,
-    attribution: "&copy; OpenStreetMap"
-  }).addTo(map);
-  markerLayer = L.layerGroup().addTo(map);
-}
-
-function renderFilters() {
-  filtersNode.innerHTML = "";
-  Object.entries(categories).forEach(([key, item]) => {
-    const button = document.createElement("button");
-    button.className = `filter-button ${activeCategory === key ? "active" : ""}`;
-    button.type = "button";
-    button.textContent = `${item.icon} ${item.label}`;
-    button.addEventListener("click", () => {
-      activeCategory = key;
-      renderFilters();
-      render();
-    });
-    filtersNode.appendChild(button);
-  });
-}
-
-function searchableText(place) {
-  return [
-    place.name,
-    place.subtitle,
-    place.description,
-    ...(place.tags || [])
-  ].join(" ").toLowerCase();
-}
-
-function currentPlaces() {
-  const query = searchNode.value.trim().toLowerCase();
-  return allPlaces.filter(place => {
-    const categoryOk = activeCategory === "all" || place.category === activeCategory;
-    const searchOk = !query || searchableText(place).includes(query);
-    return categoryOk && searchOk;
-  });
-}
-
-function render() {
-  const places = currentPlaces();
-  listNode.innerHTML = "";
-
-  const categoryName = categories[activeCategory].label;
-  kickerNode.textContent = activeCategory === "all" ? "Tutta la guida" : categoryName;
-  titleNode.textContent = searchNode.value.trim()
-    ? `Risultati per “${searchNode.value.trim()}”`
-    : activeCategory === "all"
-      ? "Luoghi selezionati"
-      : categoryName;
-  noteNode.textContent = `${places.length} luoghi disponibili`;
-
-  places.forEach(place => listNode.appendChild(createPlace(place)));
-  updateMap(places);
-}
-
-function createPlace(place) {
-  const details = document.createElement("details");
-  details.className = "place";
-
-  const summary = document.createElement("summary");
-  summary.innerHTML = `
-    <span class="place-summary">
-      <strong>
-        ${place.name}
-        ${place.tested ? '<span class="tested">✓ Testato da noi</span>' : ""}
-      </strong>
-      <small>${place.subtitle}${place.tags?.length ? " · " + place.tags.slice(0,2).join(" · ") : ""}</small>
-    </span>
-    <span class="chevron">⌄</span>
-  `;
-
-  const body = document.createElement("div");
-  body.className = "place-body";
-
-  const tags = (place.tags || []).map(tag => `<span class="tag">${tag}</span>`).join("");
-  const links = (place.links || []).map(link => `
-    <a class="link-button ${link.kind === "site" ? "secondary" : ""}"
-      href="${link.url}" target="_blank" rel="noopener">
-      ${link.kind === "maps" ? "Google Maps" : link.label || "Sito"}
-    </a>
-  `).join("");
-
-  body.innerHTML = `
-    <p>${place.description || ""}</p>
-    <div class="tags">${tags}</div>
-    <div class="link-row">${links}</div>
-  `;
-
-  details.append(summary, body);
-  return details;
-}
-
-function pinIcon(number) {
-  return L.divIcon({
-    className: "",
-    html: `<span class="paris-pin">${number}</span>`,
-    iconSize: [30, 30],
-    iconAnchor: [15, 15],
-    popupAnchor: [0, -16]
-  });
-}
-
-function updateMap(places) {
-  markerLayer.clearLayers();
-  const bounds = [];
-  let number = 0;
-
-  places.forEach(place => {
-    if (typeof place.lat !== "number" || typeof place.lon !== "number") return;
-    number += 1;
-    const marker = L.marker([place.lat, place.lon], { icon: pinIcon(number) });
-    const maps = (place.links || []).find(link => link.kind === "maps")?.url || "#";
-    marker.bindPopup(`
-      <strong>${place.name}</strong><br>
-      <small>${place.subtitle}</small><br><br>
-      <a href="${maps}" target="_blank" rel="noopener">Apri in Google Maps</a>
-    `);
-    markerLayer.addLayer(marker);
-    bounds.push([place.lat, place.lon]);
-  });
-
-  if (bounds.length) {
-    map.fitBounds(bounds, { padding: [28, 28], maxZoom: 14 });
-    mapStatusNode.textContent = `${bounds.length} luoghi visualizzati`;
-  } else {
-    map.setView([48.8566, 2.3522], 12);
-    mapStatusNode.textContent = "Nessun punto disponibile";
-  }
-
-  setTimeout(() => map.invalidateSize(), 100);
-}
-
-function distanceKm(lat1, lon1, lat2, lon2) {
-  const toRad = value => value * Math.PI / 180;
-  const earth = 6371;
-  const dLat = toRad(lat2 - lat1);
-  const dLon = toRad(lon2 - lon1);
-  const a =
-    Math.sin(dLat / 2) ** 2 +
-    Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) *
-    Math.sin(dLon / 2) ** 2;
-  return earth * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-}
-
-function showNearby(position) {
-  const { latitude, longitude } = position.coords;
-
-  allPlaces = allPlaces.map(place => ({
-    ...place,
-    distance: typeof place.lat === "number"
-      ? distanceKm(latitude, longitude, place.lat, place.lon)
-      : Infinity
-  }));
-
-  allPlaces.sort((a, b) => a.distance - b.distance);
-  activeCategory = "all";
-  searchNode.value = "";
-  renderFilters();
-
-  const nearest = allPlaces.filter(p => Number.isFinite(p.distance)).slice(0, 15);
-  listNode.innerHTML = "";
-  nearest.forEach(place => {
-    const node = createPlace(place);
-    const small = node.querySelector("small");
-    small.textContent += ` · ${place.distance < 1
-      ? Math.round(place.distance * 1000) + " m"
-      : place.distance.toFixed(1) + " km"}`;
-    listNode.appendChild(node);
-  });
-
-  titleNode.textContent = "Vicino a me";
-  kickerNode.textContent = "Posizione attuale";
-  noteNode.textContent = "I 15 luoghi più vicini";
-  updateMap(nearest);
-
-  if (userMarker) map.removeLayer(userMarker);
-  userMarker = L.circleMarker([latitude, longitude], {
-    radius: 8,
-    color: "#111",
-    fillColor: "#fff",
-    fillOpacity: 1,
-    weight: 3
-  }).addTo(map).bindPopup("Sei qui");
-
-  statusNode.textContent = "Posizione usata una sola volta. Non è attivo alcun tracciamento continuo.";
-  document.getElementById("results-section").scrollIntoView({ behavior: "smooth" });
-}
-
-function nearbyError(error) {
-  const messages = {
-    1: "Permesso posizione non concesso.",
-    2: "Posizione non disponibile.",
-    3: "Richiesta della posizione scaduta."
-  };
-  statusNode.textContent = messages[error.code] || "Non riesco a leggere la posizione.";
-}
-
-document.querySelectorAll("[data-section]").forEach(button => {
-  button.addEventListener("click", () => {
-    activeCategory = button.dataset.section;
-    searchNode.value = "";
-    renderFilters();
-    render();
-    document.getElementById("results-section").scrollIntoView({ behavior: "smooth" });
-  });
-});
-
-searchNode.addEventListener("input", render);
-
-document.getElementById("reset-button").addEventListener("click", () => {
-  activeCategory = "all";
-  searchNode.value = "";
-  renderFilters();
-  render();
-});
-
-document.getElementById("nearby-button").addEventListener("click", () => {
-  if (!navigator.geolocation) {
-    statusNode.textContent = "Questo browser non supporta la geolocalizzazione.";
-    return;
-  }
-
-  statusNode.textContent = "Ricerca della posizione in corso…";
-  navigator.geolocation.getCurrentPosition(showNearby, nearbyError, {
-    enableHighAccuracy: false,
-    timeout: 10000,
-    maximumAge: 120000
-  });
-});
-
-loadData().catch(error => {
-  console.error(error);
-  statusNode.textContent = "Errore nel caricamento dei dati. Controlla che la cartella data sia stata caricata.";
-});
+search.addEventListener("input",renderAll);
+start().catch(()=>status.textContent="Errore nel caricamento dei dati.");
