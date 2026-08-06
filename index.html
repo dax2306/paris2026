@@ -368,7 +368,171 @@
       .cards { grid-template-columns: 1fr; }
       .day { grid-template-columns: 1fr; gap: 8px; }
     }
+
+    /* Mappe tematiche */
+    .section-map-wrap {
+      margin: 0 0 18px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .section-map {
+      width: 100%;
+      height: 340px;
+      background: #e9e9ec;
+    }
+
+    .map-status {
+      margin: 0;
+      padding: 11px 15px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 12px;
+    }
+
+    .map-status.is-ready {
+      color: #327a42;
+    }
+
+    /* Schede compatte a tendina */
+    .cards.compact-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 9px;
+    }
+
+    details.place {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: var(--surface);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.035);
+    }
+
+    details.place[open] {
+      box-shadow: 0 9px 28px rgba(0, 0, 0, 0.07);
+    }
+
+    details.place summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      min-height: 72px;
+      padding: 14px 18px;
+      cursor: pointer;
+      list-style: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    details.place summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .place-summary-text {
+      min-width: 0;
+    }
+
+    .place-summary-text strong {
+      display: block;
+      font-size: 18px;
+      line-height: 1.15;
+      letter-spacing: -0.025em;
+    }
+
+    .place-summary-text small {
+      display: block;
+      margin-top: 5px;
+      overflow: hidden;
+      color: var(--muted);
+      font-size: 12px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .place-chevron {
+      flex: 0 0 auto;
+      width: 31px;
+      height: 31px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #f1f1f3;
+      font-size: 16px;
+      transition: transform .2s ease;
+    }
+
+    details.place[open] .place-chevron {
+      transform: rotate(180deg);
+    }
+
+    .place-body {
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .place-body .card-content {
+      padding: 17px 0 0;
+    }
+
+    .place-body .card-label,
+    .place-body h3 {
+      display: none;
+    }
+
+    .leaflet-popup-content {
+      margin: 13px 15px;
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    .map-popup-title {
+      margin: 0 0 5px;
+      font-size: 15px;
+      font-weight: 750;
+    }
+
+    .map-popup-meta {
+      margin: 0 0 9px;
+      color: #666;
+      font-size: 12px;
+    }
+
+    .map-popup-link {
+      display: inline-block;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #171717;
+      color: #fff !important;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 760px) {
+      .section-map {
+        height: 300px;
+      }
+
+      details.place summary {
+        min-height: 68px;
+        padding: 13px 15px;
+      }
+
+      .place-body {
+        padding: 0 15px 15px;
+      }
+    }
+
   </style>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIINfQ3ynH7tAJo2fumRkMZx1A7zYcL0w0o="
+    crossorigin=""
+  >
+
 </head>
 
 <body>
@@ -1487,5 +1651,209 @@
     <a href="#vintage"><span>🪑</span>Vintage</a>
     <a href="#arturo"><span>🧗</span>Arturo</a>
   </nav>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="">
+  </script>
+
+  <script>
+    (() => {
+      const sectionIds = ["mostre", "food", "vintage", "arturo"];
+      const geocodeCacheKey = "paris2026_geocode_v1";
+      let geocodeCache = {};
+
+      try {
+        geocodeCache = JSON.parse(localStorage.getItem(geocodeCacheKey) || "{}");
+      } catch (_) {
+        geocodeCache = {};
+      }
+
+      const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+      let lastRequestAt = 0;
+
+      function googleQueryFromLink(link) {
+        if (!link) return "";
+        try {
+          const url = new URL(link.href);
+          return url.searchParams.get("query") || "";
+        } catch (_) {
+          return "";
+        }
+      }
+
+      function compactCards(section) {
+        const cardsContainer = section.querySelector(".cards");
+        if (!cardsContainer || cardsContainer.dataset.compacted === "yes") return [];
+
+        const articles = [...cardsContainer.querySelectorAll(":scope > article.card")];
+        const places = [];
+
+        articles.forEach((article, index) => {
+          const title = article.querySelector("h3")?.textContent.trim() || `Luogo ${index + 1}`;
+          const label = article.querySelector(".card-label")?.textContent.trim() || "";
+          const tags = [...article.querySelectorAll(".tag")].map(el => el.textContent.trim());
+          const mapsLink = [...article.querySelectorAll("a")].find(a =>
+            a.href.includes("google.com/maps")
+          );
+          const query = googleQueryFromLink(mapsLink);
+
+          const details = document.createElement("details");
+          details.className = "place";
+
+          const summary = document.createElement("summary");
+          summary.innerHTML = `
+            <span class="place-summary-text">
+              <strong>${title}</strong>
+              <small>${[label, tags.slice(0, 2).join(" · ")].filter(Boolean).join(" · ")}</small>
+            </span>
+            <span class="place-chevron" aria-hidden="true">⌄</span>
+          `;
+
+          const body = document.createElement("div");
+          body.className = "place-body";
+          body.appendChild(article);
+
+          details.append(summary, body);
+          cardsContainer.appendChild(details);
+
+          places.push({ title, label, tags, mapsLink, query });
+        });
+
+        articles.forEach(article => {
+          if (article.parentElement === cardsContainer) article.remove();
+        });
+
+        cardsContainer.classList.add("compact-list");
+        cardsContainer.dataset.compacted = "yes";
+        return places;
+      }
+
+      function addMapShell(section) {
+        const existing = section.querySelector(".section-map-wrap");
+        if (existing) return existing;
+
+        const heading = section.querySelector(".section-heading");
+        const wrap = document.createElement("div");
+        wrap.className = "section-map-wrap";
+        wrap.innerHTML = `
+          <div class="section-map" id="map-${section.id}" aria-label="Mappa della sezione"></div>
+          <p class="map-status">La mappa si carica quando apri questa sezione. I punti compaiono progressivamente.</p>
+        `;
+        heading.insertAdjacentElement("afterend", wrap);
+        return wrap;
+      }
+
+      async function geocode(query) {
+        if (!query) return null;
+        if (geocodeCache[query]) return geocodeCache[query];
+
+        const elapsed = Date.now() - lastRequestAt;
+        if (elapsed < 1100) await sleep(1100 - elapsed);
+        lastRequestAt = Date.now();
+
+        try {
+          const endpoint = new URL("https://nominatim.openstreetmap.org/search");
+          endpoint.searchParams.set("q", query);
+          endpoint.searchParams.set("format", "jsonv2");
+          endpoint.searchParams.set("limit", "1");
+          endpoint.searchParams.set("countrycodes", "fr");
+
+          const response = await fetch(endpoint, {
+            headers: { "Accept-Language": "fr,it;q=0.9,en;q=0.8" }
+          });
+          if (!response.ok) return null;
+
+          const result = await response.json();
+          if (!result.length) return null;
+
+          const point = {
+            lat: Number(result[0].lat),
+            lon: Number(result[0].lon),
+            display: result[0].display_name
+          };
+
+          geocodeCache[query] = point;
+          localStorage.setItem(geocodeCacheKey, JSON.stringify(geocodeCache));
+          return point;
+        } catch (_) {
+          return null;
+        }
+      }
+
+      async function buildMap(section, places) {
+        if (section.dataset.mapBuilt === "yes" || !window.L) return;
+        section.dataset.mapBuilt = "yes";
+
+        const mapNode = section.querySelector(".section-map");
+        const status = section.querySelector(".map-status");
+
+        const map = L.map(mapNode, {
+          scrollWheelZoom: false,
+          tap: true
+        }).setView([48.8566, 2.3522], 12);
+
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+          maxZoom: 19,
+          attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        const bounds = [];
+        let loaded = 0;
+
+        for (const place of places) {
+          status.textContent = `Caricamento punti: ${loaded}/${places.length}…`;
+          const point = await geocode(place.query || `${place.title}, Paris, France`);
+          if (!point) continue;
+
+          loaded += 1;
+          bounds.push([point.lat, point.lon]);
+
+          const mapsHref = place.mapsLink?.href || 
+            `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.title + " Paris")}`;
+
+          const marker = L.marker([point.lat, point.lon]).addTo(map);
+          marker.bindPopup(`
+            <p class="map-popup-title">${place.title}</p>
+            <p class="map-popup-meta">${place.label || ""}</p>
+            <a class="map-popup-link" href="${mapsHref}" target="_blank" rel="noopener">
+              Apri in Google Maps
+            </a>
+          `);
+        }
+
+        if (bounds.length) {
+          map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 });
+          status.textContent = `${loaded} luoghi visualizzati. Tocca un indicatore per aprire la scheda.`;
+          status.classList.add("is-ready");
+        } else {
+          status.textContent = "La mappa non è riuscita a localizzare i luoghi. Le schede e i pulsanti Google Maps restano disponibili.";
+        }
+
+        setTimeout(() => map.invalidateSize(), 200);
+      }
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const section = entry.target;
+          const places = section._parisPlaces || [];
+          buildMap(section, places);
+          observer.unobserve(section);
+        });
+      }, { rootMargin: "350px 0px" });
+
+      sectionIds.forEach(id => {
+        const section = document.getElementById(id);
+        if (!section) return;
+        const places = compactCards(section);
+        section._parisPlaces = places;
+        addMapShell(section);
+        observer.observe(section);
+      });
+    })();
+  </script>
+
 </body>
 </html>
