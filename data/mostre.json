@@ -1,0 +1,288 @@
+[
+  {
+    "id": "calder-r-ver-en-quilibre",
+    "name": "Calder. Rêver en équilibre",
+    "subtitle": "Fondation Louis Vuitton · Bois de Boulogne",
+    "description": "Una grande retrospettiva dedicata ad Alexander Calder, con quasi 300 opere negli spazi progettati da Frank Gehry. È una delle visite da mettere in cima alla lista.",
+    "tags": [
+      "Fino al 16 agosto",
+      "0–36 €",
+      "Architettura + arte"
+    ],
+    "lat": 48.8767,
+    "lon": 2.2634,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Fondation+Louis+Vuitton+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.fondationlouisvuitton.fr/fr/evenements/calder-rever-en-equilibre",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "exposition-g-n-rale",
+    "name": "Exposition Générale",
+    "subtitle": "Fondation Cartier · Palais-Royal",
+    "description": "La grande mostra inaugurale nei nuovi spazi della Fondation Cartier a Place du Palais-Royal. Interessante sia per la collezione sia per il progetto architettonico.",
+    "tags": [
+      "Fino al 23 agosto",
+      "15 €",
+      "Contemporaneo"
+    ],
+    "lat": 48.8637,
+    "lon": 2.3365,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Fondation+Cartier+2+Place+du+Palais-Royal+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.fondationcartier.com/programme/exposition/exposition-generale",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "raymond-hains-l-uvre-en-chantier",
+    "name": "Raymond Hains. L’œuvre en chantier",
+    "subtitle": "Fondation Cartier · Galerie Valois",
+    "description": "Un percorso dedicato a Raymond Hains tra immagini, frammenti urbani, memoria e linguaggio. Facile da abbinare a Palais-Royal e Galerie Vivienne.",
+    "tags": [
+      "Fino al 23 agosto",
+      "Palais-Royal",
+      "Arte urbana"
+    ],
+    "lat": 48.864,
+    "lon": 2.3372,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Fondation+Cartier+Galerie+Valois+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.fondationcartier.com/programme/exposition/raymond-hains-l-oeuvre-en-chantier-du-grand-louvre-aux-3-cartier-galerie-valois",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "clair-obscur",
+    "name": "Clair-obscur",
+    "subtitle": "Bourse de Commerce · Pinault Collection",
+    "description": "Una mostra collettiva sul rapporto tra luce e ombra, ospitata nell’edificio trasformato da Tadao Ando. Per voi vale la visita anche per l’architettura.",
+    "tags": [
+      "Fino al 24 agosto",
+      "15 €",
+      "Tadao Ando"
+    ],
+    "lat": 48.8629,
+    "lon": 2.3426,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bourse+de+Commerce+Pinault+Collection+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.pinaultcollection.com/fr/boursedecommerce/clair-obscur-0",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "hilma-af-klint-les-peintures-du-temple",
+    "name": "Hilma af Klint. Les peintures du Temple",
+    "subtitle": "Grand Palais",
+    "description": "La prima grande esposizione francese dedicata a Hilma af Klint, centrata sul ciclo monumentale dei dipinti del Tempio. Una delle mostre più importanti dell’estate.",
+    "tags": [
+      "Fino al 30 agosto",
+      "Arte moderna",
+      "Da prenotare"
+    ],
+    "lat": 48.8661,
+    "lon": 2.3125,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Grand+Palais+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.grandpalais.fr/fr/programme/hilma-af-klint-les-peintures-du-temple-1906-1915",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "grand-palais-d-t-2026",
+    "name": "Grand Palais d’été 2026",
+    "subtitle": "Grand Palais · Nef",
+    "description": "La grande navata diventa uno spazio dedicato a installazioni, performance e creazione contemporanea. Buona scelta anche con Arturo grazie agli spazi e alle attività per famiglie.",
+    "tags": [
+      "Estate 2026",
+      "Performance",
+      "Famiglie"
+    ],
+    "lat": 48.8661,
+    "lon": 2.3125,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Grand+Palais+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Programma",
+        "url": "https://www.grandpalais.fr/fr/programme/grand-palais-dete-2026",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "programma-estivo-2026",
+    "name": "Programma estivo 2026",
+    "subtitle": "Palais de Tokyo",
+    "description": "Il grande centro d’arte contemporanea propone diverse mostre estive, tra cui la personale di Neïla Czermak Ichti. È il luogo più sperimentale della selezione.",
+    "tags": [
+      "Contemporaneo",
+      "Sperimentale",
+      "Aperto fino a sera"
+    ],
+    "lat": 48.8641,
+    "lon": 2.2966,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Palais+de+Tokyo+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Programma",
+        "url": "https://palaisdetokyo.com/agenda-palais-de-tokyo/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "una-giornata-nel-xviii-secolo",
+    "name": "Una giornata nel XVIII secolo",
+    "subtitle": "Musée des Arts Décoratifs",
+    "description": "Un percorso immersivo dentro un hôtel particulier del Settecento, con oltre 550 oggetti tra mobili, ceramiche, tessuti, gioielli e decorazione. Molto adatto ai vostri interessi.",
+    "tags": [
+      "Fino al 4 ottobre",
+      "Design e interni",
+      "Percorso bambino"
+    ],
+    "lat": 48.863,
+    "lon": 2.3338,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e+des+Arts+D%C3%A9coratifs+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://madparis.fr/Une-journee-au-XVIIIe-siecle-chronique-d-un-hotel-particulier",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "la-mode-en-majest",
+    "name": "La Mode en majesté",
+    "subtitle": "Musée des Arts Décoratifs",
+    "description": "Haute couture e tradizione alla corte thailandese, con abiti, accessori e apparati scenografici. Si visita nello stesso museo della mostra sul XVIII secolo.",
+    "tags": [
+      "Fino al 1 novembre",
+      "Moda",
+      "Scenografia"
+    ],
+    "lat": 48.863,
+    "lon": 2.3338,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e+des+Arts+D%C3%A9coratifs+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://madparis.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "fragile-beaut",
+    "name": "Fragile beauté",
+    "subtitle": "Jeu de Paume · Tuileries",
+    "description": "Una selezione fotografica dalla collezione di Elton John e David Furnish. Visita compatta e facile da inserire nella giornata tra Tuileries e Palais-Royal.",
+    "tags": [
+      "Fino al 24 settembre",
+      "Fotografia",
+      "Visita compatta"
+    ],
+    "lat": 48.8659,
+    "lon": 2.3231,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jeu+de+Paume+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://jeudepaume.org/evenement/fragile-beaute-photographies-de-la-collection-de-sir-elton-john-et-david-furnish/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "madeleine-de-sin-ty-une-vie",
+    "name": "Madeleine de Sinéty. Une vie",
+    "subtitle": "Jeu de Paume · Tuileries",
+    "description": "La prima retrospettiva dedicata alla fotografa francese, con immagini della vita quotidiana in Bretagna e negli Stati Uniti.",
+    "tags": [
+      "Fino al 24 settembre",
+      "Fotografia",
+      "Vita quotidiana"
+    ],
+    "lat": 48.8659,
+    "lon": 2.3231,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jeu+de+Paume+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://jeudepaume.org/evenement/madeleine-de-sinety-paris/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  }
+]

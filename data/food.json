@@ -1,0 +1,851 @@
+[
+  {
+    "id": "miznon",
+    "name": "Miznon",
+    "subtitle": "Marais · Pranzo veloce",
+    "description": "Street food israeliano in un locale vivace e informale. Pita farcite e verdure arrostite.",
+    "tags": [
+      "€ · 10–20 €",
+      "Street food",
+      "Pranzo"
+    ],
+    "lat": 48.8573,
+    "lon": 2.3592,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Miznon+22+Rue+des+Ecouffes+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.miznonparis.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "l-as-du-fallafel",
+    "name": "L’As du Fallafel",
+    "subtitle": "Marais · Pranzo veloce",
+    "description": "Il classico di Rue des Rosiers: falafel abbondante, servizio rapido e atmosfera animata.",
+    "tags": [
+      "€ · 10–20 €",
+      "Falafel",
+      "Da asporto"
+    ],
+    "lat": 48.857,
+    "lon": 2.3591,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=L%27As+du+Fallafel+34+Rue+des+Rosiers+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-des-enfants-rouges",
+    "name": "Marché des Enfants Rouges",
+    "subtitle": "Marais · Mercato coperto",
+    "description": "Mercato storico con banchi marocchini, asiatici, francesi e mediterranei.",
+    "tags": [
+      "€€ · 15–25 €",
+      "Molte cucine",
+      "Pranzo"
+    ],
+    "lat": 48.8632,
+    "lon": 2.3611,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+des+Enfants+Rouges+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "breizh-caf",
+    "name": "Breizh Café",
+    "subtitle": "Marais · Pranzo",
+    "description": "Crêperie contemporanea, curata e adatta anche ad Arturo. Galette bretoni e sidro.",
+    "tags": [
+      "€€ · 20–30 €",
+      "Galette",
+      "Prenotabile"
+    ],
+    "lat": 48.8614,
+    "lon": 2.362,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Breizh+Caf%C3%A9+Marais+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.breizhcafe.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "kodawari-ramen-yokocho",
+    "name": "Kodawari Ramen Yokocho",
+    "subtitle": "Saint-Germain · Pranzo o cena",
+    "description": "Ramen artigianale in un ambiente immersivo che ricrea una piccola strada di Tokyo.",
+    "tags": [
+      "€€ · 20–30 €",
+      "Ramen",
+      "Scenografico"
+    ],
+    "lat": 48.8544,
+    "lon": 2.3378,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Yokocho+29+Rue+Mazarine+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.kodawari-ramen.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "kodawari-ramen-tsukiji",
+    "name": "Kodawari Ramen Tsukiji",
+    "subtitle": "Palais-Royal · Pranzo o cena",
+    "description": "Sede ispirata al mercato del pesce di Tokyo, comoda per Palais-Royal e Galerie Vivienne.",
+    "tags": [
+      "€€ · 20–30 €",
+      "Ramen",
+      "Possibile coda"
+    ],
+    "lat": 48.8646,
+    "lon": 2.3363,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Tsukiji+12+Rue+de+Richelieu+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.kodawari-ramen.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "les-antiquaires",
+    "name": "Les Antiquaires",
+    "subtitle": "Musée d’Orsay · Bistrot",
+    "description": "Bistrot parigino caldo e accogliente, perfetto dopo il Musée d’Orsay.",
+    "tags": [
+      "€€€ · 30–50 €",
+      "Francese",
+      "Pranzo o cena"
+    ],
+    "lat": 48.8572,
+    "lon": 2.3259,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Les+Antiquaires+13+Rue+du+Bac+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://lesantiquaires.net/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bouillon-r-publique",
+    "name": "Bouillon République",
+    "subtitle": "République · Cena francese",
+    "description": "Grande brasserie vivace, cucina francese tradizionale e prezzi contenuti.",
+    "tags": [
+      "€ · 12–25 €",
+      "Francese",
+      "Informale"
+    ],
+    "lat": 48.8652,
+    "lon": 2.3654,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+R%C3%A9publique+39+Boulevard+du+Temple+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://bouillonlesite.com/bouillon-republique",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bouillon-pigalle",
+    "name": "Bouillon Pigalle",
+    "subtitle": "Pigalle · Pranzo o cena",
+    "description": "Brasserie su due livelli, molto animata. Perfetta dopo Montmartre.",
+    "tags": [
+      "€ · 12–25 €",
+      "Francese",
+      "Atmosfera vivace"
+    ],
+    "lat": 48.8824,
+    "lon": 2.336,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Pigalle+22+Boulevard+de+Clichy+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://bouillonlesite.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bouillon-julien",
+    "name": "Bouillon Julien",
+    "subtitle": "Faubourg Saint-Denis · Cena",
+    "description": "Uno degli interni Art Nouveau più belli tra i ristoranti parigini.",
+    "tags": [
+      "€€ · 20–35 €",
+      "Art Nouveau",
+      "Francese"
+    ],
+    "lat": 48.87,
+    "lon": 2.3548,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Julien+16+Rue+du+Faubourg+Saint-Denis+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.bouillon-julien.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "gros-bao",
+    "name": "Gros Bao",
+    "subtitle": "Canal Saint-Martin · Pranzo o cena",
+    "description": "Grande cantina cinese contemporanea sul canale, colorata e informale.",
+    "tags": [
+      "€€ · 20–35 €",
+      "Cinese",
+      "Piatti condivisi"
+    ],
+    "lat": 48.8723,
+    "lon": 2.3662,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Gros+Bao+72+Quai+de+Jemmapes+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.baofamily.co/grosbao",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "petit-bao-bastille",
+    "name": "Petit Bao Bastille",
+    "subtitle": "Bastille · Pranzo",
+    "description": "Cantina cinese pop, informale e molto piacevole per un pranzo in famiglia.",
+    "tags": [
+      "€€ · 18–30 €",
+      "Bao e dim sum",
+      "Arturo-friendly"
+    ],
+    "lat": 48.8556,
+    "lon": 2.374,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Petit+Bao+Bastille+10+Rue+Breguet+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.baofamily.co/petitbao-bastille",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bleu-bao",
+    "name": "Bleu Bao",
+    "subtitle": "Saint-Lazare · Pranzo o cena",
+    "description": "Dim sum e cocktail in un ambiente ispirato alle case tradizionali cinesi.",
+    "tags": [
+      "€€ · 25–40 €",
+      "Dim sum",
+      "Molto curato"
+    ],
+    "lat": 48.876,
+    "lon": 2.3382,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bleu+Bao+8+Rue+Saint-Lazare+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.baofamily.co/bleu-bao",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "quartier-vavin",
+    "name": "Quartier Vavin",
+    "subtitle": "Vavin · ❤️ Testato da noi",
+    "description": "La vostra certezza vicino a casa: brasserie di quartiere piacevole,\n              terrazza, cucina francese fatta in casa e servizio continuo.\n              Da scegliere quando volete andare sul sicuro.",
+    "tags": [
+      "€€ · 20–30 €",
+      "Pranzo o cena",
+      "Testato da noi"
+    ],
+    "lat": 48.843,
+    "lon": 2.3297,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Quartier+Vavin+18+Rue+Vavin+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://quartier-vavin.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": true
+  },
+  {
+    "id": "bouillon-chartier-montparnasse",
+    "name": "Bouillon Chartier Montparnasse",
+    "subtitle": "Montparnasse · Bouillon economico",
+    "description": "Molto vicino a casa, in una sala Art Nouveau classificata.\n              Piatti francesi semplici, servizio rapido e conto spesso sotto i 20 €.\n              Ideale soprattutto a pranzo.",
+    "tags": [
+      "€ · meno di 20 €",
+      "Perfetto a pranzo",
+      "Art Nouveau"
+    ],
+    "lat": 48.8437,
+    "lon": 2.3236,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Chartier+Montparnasse+59+Boulevard+du+Montparnasse+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://www.bouillon-chartier.com/en/bouillon-chartier-montparnasse-en/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bouillon-chartier-grands-boulevards",
+    "name": "Bouillon Chartier Grands Boulevards",
+    "subtitle": "Grands Boulevards · Bouillon storico",
+    "description": "Il Chartier originale del 1896: sala Belle Époque monumentale,\n              cucina francese popolare e prezzi bassi. Da scegliere soprattutto\n              per atmosfera e storia.",
+    "tags": [
+      "€ · meno di 20 €",
+      "Storico",
+      "Possibile coda"
+    ],
+    "lat": 48.8731,
+    "lon": 2.3431,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Chartier+Grands+Boulevards+7+Rue+du+Faubourg+Montmartre+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://www.bouillon-chartier.com/en/bouillon-chartier-grands-boulevards-en/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "brasserie-des-pr-s",
+    "name": "Brasserie des Prés",
+    "subtitle": "Saint-Germain · Brasserie curata",
+    "description": "Brasserie contemporanea nella Cour du Commerce Saint-André.\n              Cucina francese, ambiente vivace e interni molto curati.\n              La proposta più simile allo spirito di Quartier Vavin, ma più scenografica.",
+    "tags": [
+      "€€ · 25–40 €",
+      "Pranzo o cena",
+      "Bella atmosfera"
+    ],
+    "lat": 48.8535,
+    "lon": 2.3385,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Brasserie+des+Pres+6+Cour+du+Commerce+Saint-Andre+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://lanouvellegarde.com/fr/brasserie-des-pres/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bistro-des-lettres",
+    "name": "Bistro des Lettres",
+    "subtitle": "Quartiere Latino · Bistro letterario",
+    "description": "Cucina francese stagionale in un ambiente caldo e letterario,\n              vicino a Notre-Dame. Una proposta originale e piacevole anche con Arturo.",
+    "tags": [
+      "€€ · 25–45 €",
+      "Pranzo o cena",
+      "Atmosfera originale"
+    ],
+    "lat": 48.8496,
+    "lon": 2.3519,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bistro+des+Lettres+52+Boulevard+Saint-Germain+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e prenotazioni",
+        "url": "https://bistrodeslettres.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "le-bistro-de-buci",
+    "name": "Le Bistro de Buci",
+    "subtitle": "Rue de Buci · Brasserie vivace",
+    "description": "Brasserie moderna nel cuore di Saint-Germain, comoda dopo una passeggiata\n              tra Rue de Buci, Odéon e il lungosenna.",
+    "tags": [
+      "€€ · 25–45 €",
+      "Pranzo o cena",
+      "Vivace"
+    ],
+    "lat": 48.8535,
+    "lon": 2.3367,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Bistro+de+Buci+12+Rue+de+Buci+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "c-t-saint-germain",
+    "name": "Côté Saint-Germain",
+    "subtitle": "Boulevard Saint-Germain · Terrazza",
+    "description": "Brasserie rilassata con grande terrazza e servizio continuo.\n              Utile per un pranzo senza formalità durante una giornata in centro.",
+    "tags": [
+      "€€ · 20–40 €",
+      "Pranzo",
+      "Terrazza"
+    ],
+    "lat": 48.8537,
+    "lon": 2.3333,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cote+Saint-Germain+150+Boulevard+Saint-Germain+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "vagenende",
+    "name": "Vagenende",
+    "subtitle": "Saint-Germain · Belle Époque",
+    "description": "Brasserie storica del 1904 con specchi, boiserie e decorazioni Belle Époque.\n              Più costosa dei bouillons, ma interessante soprattutto per gli interni.",
+    "tags": [
+      "€€€ · 35–60 €",
+      "Cena",
+      "Interni storici"
+    ],
+    "lat": 48.8536,
+    "lon": 2.3349,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Vagenende+142+Boulevard+Saint-Germain+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.vagenende.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "la-rotonde-montparnasse",
+    "name": "La Rotonde Montparnasse",
+    "subtitle": "Montparnasse · Brasserie storica",
+    "description": "Grande classico del quartiere, cucina francese tradizionale,\n              bella terrazza e posizione comodissima rispetto a casa.",
+    "tags": [
+      "€€€ · 35–60 €",
+      "Pranzo o cena",
+      "Storica"
+    ],
+    "lat": 48.8425,
+    "lon": 2.3287,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=La+Rotonde+Montparnasse+105+Boulevard+du+Montparnasse+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://larotonde-montparnasse.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "brasserie-bellanger",
+    "name": "Brasserie Bellanger",
+    "subtitle": "Gare du Nord · Brasserie contemporanea",
+    "description": "Cucina francese di stagione, tutta fatta in casa, in un ambiente rétro e vivace. Una buona scelta se vi trovate tra Gare du Nord, Canal Saint-Martin e Montmartre.",
+    "tags": [
+      "€€ · 25–40 €",
+      "Pranzo o cena",
+      "Cucina francese"
+    ],
+    "lat": 48.8782,
+    "lon": 2.349,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Brasserie+Bellanger+140+Rue+du+Faubourg+Poissonniere+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://lanouvellegarde.com/fr/brasserie-bellanger/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "brasserie-dubillot",
+    "name": "Brasserie Dubillot",
+    "subtitle": "Sentier · Brasserie contemporanea",
+    "description": "Grande brasserie su due livelli con cucina al carbone, prodotti francesi e atmosfera molto vivace. Comoda per una giornata tra Les Halles, Montorgueil e Grands Boulevards.",
+    "tags": [
+      "€€ · 25–40 €",
+      "Pranzo o cena",
+      "Griglia"
+    ],
+    "lat": 48.8684,
+    "lon": 2.3508,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Brasserie+Dubillot+222+Rue+Saint-Denis+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://lanouvellegarde.com/fr/brasserie-dubillot/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "brasserie-martin",
+    "name": "Brasserie Martin",
+    "subtitle": "11° arrondissement · Brasserie di quartiere",
+    "description": "Locale di quartiere con doppia terrazza, grande girarrosto e piatti francesi da condividere. Da abbinare a Bastille, Oberkampf o Père-Lachaise.",
+    "tags": [
+      "€€ · 25–40 €",
+      "Pranzo o cena",
+      "Terrazza"
+    ],
+    "lat": 48.8612,
+    "lon": 2.3784,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Brasserie+Martin+24+Rue+Saint-Ambroise+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://lanouvellegarde.com/fr/brasserie-martin/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "la-coupole",
+    "name": "La Coupole",
+    "subtitle": "Montparnasse · Art Déco",
+    "description": "Una delle brasserie storiche più famose di Parigi, aperta dal 1927. Vale soprattutto per gli interni Art Déco monumentali e per l’atmosfera del quartiere.",
+    "tags": [
+      "€€€ · 35–60 €",
+      "Pranzo o cena",
+      "Art Déco"
+    ],
+    "lat": 48.8421,
+    "lon": 2.329,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=La+Coupole+102+Boulevard+du+Montparnasse+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e prenotazioni",
+        "url": "https://www.lacoupole-paris.com/en/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bofinger",
+    "name": "Bofinger",
+    "subtitle": "Bastille · Brasserie storica",
+    "description": "Grande brasserie alsaziana con una spettacolare cupola in vetro, frutti di mare e cucina tradizionale. Una bella scelta se volete un interno storico ma meno turistico di altri classici.",
+    "tags": [
+      "€€€ · 35–60 €",
+      "Pranzo o cena",
+      "Interni storici"
+    ],
+    "lat": 48.853,
+    "lon": 2.3692,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bofinger+5+Rue+de+la+Bastille+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e prenotazioni",
+        "url": "https://www.bofingerparis.com/en/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "le-petit-bouillon-pharamond",
+    "name": "Le Petit Bouillon Pharamond",
+    "subtitle": "Les Halles · Bouillon",
+    "description": "Bouillon storico con interni in legno e cucina francese semplice a prezzi accessibili. Comodo dopo Bourse de Commerce, Les Halles o il Centre Pompidou.",
+    "tags": [
+      "€ · 15–25 €",
+      "Pranzo o cena",
+      "Storico"
+    ],
+    "lat": 48.8624,
+    "lon": 2.349,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Petit+Bouillon+Pharamond+24+Rue+de+la+Grande+Truanderie+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://www.petitbouillonpharamond.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bouillon-racine",
+    "name": "Bouillon Racine",
+    "subtitle": "Quartiere Latino · Art Nouveau",
+    "description": "Un interno Art Nouveau eccezionale vicino alla Sorbona. I prezzi sono più alti di un bouillon tradizionale, ma il luogo è notevole per chi ama architettura e decorazione.",
+    "tags": [
+      "€€€ · 35–60 €",
+      "Cena",
+      "Art Nouveau"
+    ],
+    "lat": 48.8497,
+    "lon": 2.3422,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bouillon+Racine+3+Rue+Racine+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://bouillonracine.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "dumbo",
+    "name": "Dumbo",
+    "subtitle": "Pigalle · Smash burger",
+    "description": "Smash burger essenziale e molto ben fatto. Scelta perfetta per un pranzo veloce con Arturo durante una giornata tra Pigalle e Montmartre.",
+    "tags": [
+      "€ · 12–20 €",
+      "Pranzo veloce",
+      "Burger"
+    ],
+    "lat": 48.8806,
+    "lon": 2.335,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Dumbo+64+Rue+Jean-Baptiste+Pigalle+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e menu",
+        "url": "https://www.dumboparis.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "urfa-d-r-m",
+    "name": "Urfa Dürüm",
+    "subtitle": "Strasbourg-Saint-Denis · Street food",
+    "description": "Piccolo indirizzo curdo famoso per i dürüm preparati al momento. Economico, rapido e molto adatto a un pranzo mentre siete in giro.",
+    "tags": [
+      "€ · 10–18 €",
+      "Pranzo veloce",
+      "Dürüm"
+    ],
+    "lat": 48.8732,
+    "lon": 2.3541,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Urfa+Durum+58+Rue+du+Faubourg+Saint-Denis+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "mehmet",
+    "name": "Mehmet",
+    "subtitle": "Montmartre · Dürüm contemporaneo",
+    "description": "Dürüm artigianali con carni e verdure curate, in un piccolo locale dall’atmosfera più da bistrot che da kebab. Buona alternativa informale per Montmartre.",
+    "tags": [
+      "€€ · 15–30 €",
+      "Pranzo o cena",
+      "Informale"
+    ],
+    "lat": 48.891,
+    "lon": 2.345,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Mehmet+Paris+18+restaurant",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "breizh-caf-rue-cler",
+    "name": "Breizh Café Rue Cler",
+    "subtitle": "Rue Cler · Crêperie",
+    "description": "Una seconda sede utile vicino alla Tour Eiffel. Galette di grano saraceno, crêpes e sidro in un ambiente informale e adatto anche ad Arturo.",
+    "tags": [
+      "€€ · 20–30 €",
+      "Pranzo o cena",
+      "Galette"
+    ],
+    "lat": 48.8568,
+    "lon": 2.3054,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Breizh+Cafe+59+Rue+Cler+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://en.breizhcafe.com/rue-cler",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "cr-perie-josselin",
+    "name": "Crêperie Josselin",
+    "subtitle": "Montparnasse · Crêperie tradizionale",
+    "description": "Un classico della rue du Montparnasse, semplice e molto vicino a casa. Buona scelta quando volete una cena facile e informale senza prenotare troppo lontano.",
+    "tags": [
+      "€ · 15–25 €",
+      "Pranzo o cena",
+      "Crêpes"
+    ],
+    "lat": 48.8417,
+    "lon": 2.3237,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Creperie+Josselin+67+Rue+du+Montparnasse+Paris",
+        "kind": "maps"
+      }
+    ],
+    "tested": false
+  }
+]

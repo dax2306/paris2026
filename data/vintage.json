@@ -1,0 +1,340 @@
+[
+  {
+    "id": "puces-de-vanves",
+    "name": "Puces de Vanves",
+    "subtitle": "Porte de Vanves · Sabato 8 o domenica 9",
+    "description": "Il mercato più autentico e accessibile della selezione. Circa 380 professionisti\n              con mobili, lampade, ceramiche, stampe, fotografia, oggetti Art déco e pezzi anni ’50–’70.\n              Andate presto: è il posto migliore per cercare davvero qualcosa da comprare.",
+    "tags": [
+      "Sab 07:00–14:00",
+      "Dom dalla mattina",
+      "Prezzi vari"
+    ],
+    "lat": 48.8261,
+    "lon": 2.3064,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Vanves",
+        "kind": "maps"
+      },
+      {
+        "label": "Orari ufficiali",
+        "url": "https://www.paris.fr/lieux/marche-aux-puces-de-la-porte-de-vanves-4518",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "les-puces-de-paris-saint-ouen",
+    "name": "Les Puces de Paris Saint-Ouen",
+    "subtitle": "Saint-Ouen · Sabato, domenica o lunedì",
+    "description": "Una vera città dell’antiquariato, composta da numerosi mercati diversi.\n              Dedicate almeno mezza giornata. Per i vostri interessi conviene concentrarsi\n              su Paul Bert Serpette, Dauphine, Biron, Vernaison e Jules Vallès.",
+    "tags": [
+      "Sab–Dom 10:00–18:00",
+      "Lun 11:00–17:00",
+      "Mezza giornata"
+    ],
+    "lat": 48.9026,
+    "lon": 2.343,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+Paris+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e mappa",
+        "url": "https://www.pucesdeparissaintouen.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "paul-bert-serpette",
+    "name": "Paul Bert Serpette",
+    "subtitle": "Saint-Ouen · Design del Novecento",
+    "description": "La tappa prioritaria per mobili e illuminazione del XX secolo.\n              Qui convivono design, arte, tessili, gioielli, oggetti tribali e pezzi da collezione.\n              È il mercato più vicino ai vostri interessi professionali.",
+    "tags": [
+      "Design",
+      "Mobilio",
+      "Fascia medio-alta"
+    ],
+    "lat": 48.9035,
+    "lon": 2.3389,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Paul+Bert+Serpette+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Scheda ufficiale",
+        "url": "https://www.pucesdeparissaintouen.com/marche-paul-bert-serpette/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-dauphine",
+    "name": "Marché Dauphine",
+    "subtitle": "Saint-Ouen · Coperto",
+    "description": "Un mercato coperto piacevole anche se piove, con modernariato, vinili,\n              libri, fotografie, poster, arredi e oggetti curiosi. Ha un’atmosfera più\n              ordinata e contemporanea rispetto ai mercati all’aperto.",
+    "tags": [
+      "Al coperto",
+      "Poster e libri",
+      "Modernariato"
+    ],
+    "lat": 48.9019,
+    "lon": 2.3434,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Dauphine+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.marche-dauphine.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-biron",
+    "name": "Marché Biron",
+    "subtitle": "Saint-Ouen · Antiquariato di livello",
+    "description": "Dal XVII secolo al design del Novecento: mobili importanti, dipinti,\n              vetri, bronzi, argenti e gioielli. Più costoso, ma molto interessante\n              anche senza acquistare nulla.",
+    "tags": [
+      "Antiquariato",
+      "Pezzi importanti",
+      "Fascia alta"
+    ],
+    "lat": 48.9025,
+    "lon": 2.341,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Biron+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Scheda ufficiale",
+        "url": "https://www.pucesdeparissaintouen.com/marche-biron/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-vernaison",
+    "name": "Marché Vernaison",
+    "subtitle": "Saint-Ouen · Il più antico",
+    "description": "Labirintico, informale e pieno di sorprese: insegne, piccoli mobili,\n              giocattoli, tessili, stoviglie, decorazioni e oggetti insoliti.\n              È la parte più “da caccia al tesoro” di Saint-Ouen.",
+    "tags": [
+      "Atmosfera",
+      "Oggetti curiosi",
+      "Prezzi vari"
+    ],
+    "lat": 48.9015,
+    "lon": 2.343,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Vernaison+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Scheda ufficiale",
+        "url": "https://www.pucesdeparissaintouen.com/marche-vernaison/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-jules-vall-s",
+    "name": "Marché Jules Vallès",
+    "subtitle": "Saint-Ouen · Brocante autentica",
+    "description": "Più ruvido e meno patinato, con utensili, sedie, vecchie insegne,\n              elementi industriali, lampade e oggetti da recupero. Da vedere se amate\n              i materiali e i pezzi con una storia visibile.",
+    "tags": [
+      "Industriale",
+      "Recupero",
+      "Poco turistico"
+    ],
+    "lat": 48.9036,
+    "lon": 2.3457,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Jules+Vall%C3%A8s+Saint-Ouen",
+        "kind": "maps"
+      },
+      {
+        "label": "Mappa delle Puces",
+        "url": "https://www.pucesdeparissaintouen.com/marches-et-rues/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "puces-d-aligre",
+    "name": "Puces d’Aligre",
+    "subtitle": "Aligre · Martedì–domenica mattina",
+    "description": "Piccola brocante popolare accanto al mercato alimentare.\n              Più adatta a oggetti, libri, stoviglie, vinili e curiosità che al mobilio,\n              ma molto autentica e facile da abbinare a una passeggiata a Bastille.",
+    "tags": [
+      "Mattina",
+      "Popolare",
+      "Piccoli oggetti"
+    ],
+    "lat": 48.8494,
+    "lon": 2.3785,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Puces+d%27Aligre+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Mercati di Parigi",
+        "url": "https://www.paris.fr/pages/les-marches-parisiens-2428",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "puces-de-montreuil",
+    "name": "Puces de Montreuil",
+    "subtitle": "Porte de Montreuil · Opzione alternativa",
+    "description": "Mercato più popolare e meno orientato al design, con usato,\n              abbigliamento, utensili e oggetti di ogni genere. Non è prioritario,\n              ma può piacere se cercate un ambiente più grezzo e poco turistico.",
+    "tags": [
+      "Molto popolare",
+      "Usato misto",
+      "Prezzi bassi"
+    ],
+    "lat": 48.8554,
+    "lon": 2.415,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Montreuil+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Informazioni",
+        "url": "https://www.paris.fr/pages/les-marches-parisiens-2428",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "march-du-livre-ancien-georges-brassens",
+    "name": "Marché du livre ancien Georges Brassens",
+    "subtitle": "Libri usati · Weekend",
+    "description": "Un mercato coperto dedicato a libri antichi e d’occasione,\n              stampe, manifesti e carta. È vicino a Porte de Vanves e può essere\n              abbinato alla stessa mattina, se avete ancora energie.",
+    "tags": [
+      "Libri e stampe",
+      "Coperto",
+      "Weekend"
+    ],
+    "lat": 48.8313,
+    "lon": 2.2994,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+du+livre+ancien+Georges+Brassens+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Informazioni",
+        "url": "https://www.paris.fr/pages/les-marches-parisiens-2428",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "avenue-trudaine",
+    "name": "Avenue Trudaine",
+    "subtitle": "Brocante temporanea · Sabato 8 agosto",
+    "description": "Brocante straordinaria nel 9° arrondissement, dalle 06:00 alle 18:00.\n              Può essere una buona deviazione prima di salire verso Montmartre,\n              soprattutto se cercate piccoli oggetti e bancarelle spontanee.",
+    "tags": [
+      "Solo 8 agosto",
+      "06:00–18:00",
+      "Temporanea"
+    ],
+    "lat": 48.8812,
+    "lon": 2.3415,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Avenue+Trudaine+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Calendario",
+        "url": "https://www.offi.fr/a-travers-paris/brocantes.html",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "place-de-la-madeleine",
+    "name": "Place de la Madeleine",
+    "subtitle": "Brocante temporanea · 8 e 9 agosto",
+    "description": "Brocante straordinaria in posizione molto centrale, dalle 07:00 alle 19:00.\n              Comoda da inserire nella giornata tra Opéra, Grands Boulevards,\n              Tuileries e Palais-Royal.",
+    "tags": [
+      "8–9 agosto",
+      "07:00–19:00",
+      "Centrale"
+    ],
+    "lat": 48.8696,
+    "lon": 2.3244,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Place+de+la+Madeleine+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Calendario",
+        "url": "https://www.offi.fr/a-travers-paris/brocantes.html",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "cours-de-vincennes",
+    "name": "Cours de Vincennes",
+    "subtitle": "Brocante temporanea · Domenica 9 agosto",
+    "description": "Grande brocante straordinaria nel 12° arrondissement, dalle 06:00 alle 19:00.\n              È meno centrale, ma può essere abbinata al Bois de Vincennes,\n              al Parc Floral o allo zoo.",
+    "tags": [
+      "Solo 9 agosto",
+      "06:00–19:00",
+      "Grande brocante"
+    ],
+    "lat": 48.8472,
+    "lon": 2.4073,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cours+de+Vincennes+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Calendario",
+        "url": "https://www.offi.fr/a-travers-paris/brocantes.html",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  }
+]

@@ -1,0 +1,392 @@
+[
+  {
+    "id": "jardin-d-acclimatation",
+    "name": "Jardin d’Acclimatation",
+    "subtitle": "Bois de Boulogne · Parco divertimenti",
+    "description": "La scelta più completa per Arturo: attrazioni, giochi, piccole montagne russe,\n              aree verdi e attività. È accanto alla Fondation Louis Vuitton, quindi potete\n              abbinare facilmente le due visite.",
+    "tags": [
+      "Mezza giornata",
+      "Da 7 €; pass più cari",
+      "Top scelta"
+    ],
+    "lat": 48.8774,
+    "lon": 2.263,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jardin+d%27Acclimatation+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.jardindacclimatation.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "terrain-d-aventures-nelson-mandela",
+    "name": "Terrain d’aventures Nelson Mandela",
+    "subtitle": "Les Halles · Grande area gioco",
+    "description": "Un playground di circa 2.500 m² concepito proprio per bambini da 7 a 11 anni:\n              percorso labirintico, rilievi, strutture da esplorare e giochi fisici.\n              Le sessioni sono gratuite e durano circa 55 minuti.",
+    "tags": [
+      "Gratis",
+      "7–11 anni",
+      "55 minuti"
+    ],
+    "lat": 48.8625,
+    "lon": 2.3469,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Terrain+d%27aventures+Jardin+Nelson+Mandela+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Informazioni",
+        "url": "https://www.paris.fr/lieux/terrain-d-aventures-du-jardin-nelson-mandela-16088",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "paris-plages-bagno-e-sport",
+    "name": "Paris Plages: bagno e sport",
+    "subtitle": "Bassin de la Villette · Estate 2026",
+    "description": "Dal 4 luglio al 30 agosto il Bassin de la Villette offre balneazione gratuita,\n              attività acquatiche e animazione. È perfetto dopo la Cité des Sciences\n              oppure durante una passeggiata lungo il canale.",
+    "tags": [
+      "Gratis",
+      "11:00–21:00",
+      "Costume nello zaino"
+    ],
+    "lat": 48.8868,
+    "lon": 2.3744,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Baignade+Bassin+de+la+Villette+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Programma",
+        "url": "https://www.paris.fr/evenements/baignade-la-villette-39372",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "trampolini-estivi",
+    "name": "Trampolini estivi",
+    "subtitle": "Bassin de la Villette · Salti",
+    "description": "Trampolini gratuiti per bambini e ragazzi da 4 a 12 anni, tutti i giorni\n              nel pomeriggio. Una pausa semplice ma molto efficace per scaricare energia.",
+    "tags": [
+      "Gratis",
+      "4–12 anni",
+      "13:00–19:00"
+    ],
+    "lat": 48.8868,
+    "lon": 2.3744,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bassin+de+la+Villette+Quai+de+Seine+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Informazioni",
+        "url": "https://www.paris.fr/evenements/des-trampolines-pour-sauter-tout-l-ete-au-bassin-de-la-villette-114960",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "tyrolienne-sopra-il-bacino",
+    "name": "Tyrolienne sopra il bacino",
+    "subtitle": "Bassin de la Villette · Avventura",
+    "description": "Una zip-line che attraversa il Bassin de la Villette, riservata a bambini\n              e adolescenti. È richiesta un’altezza minima di 1,40 m e l’attività\n              può dipendere dalle condizioni meteorologiche.",
+    "tags": [
+      "Gratis",
+      "Minimo 1,40 m",
+      "Meteo permettendo"
+    ],
+    "lat": 48.8868,
+    "lon": 2.3744,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bassin+de+la+Villette+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Condizioni di accesso",
+        "url": "https://www.paris.fr/evenements/traversez-le-bassin-de-la-villette-en-tyrolienne-114957",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "cit-des-sciences-et-de-l-industrie",
+    "name": "Cité des Sciences et de l’Industrie",
+    "subtitle": "La Villette · Museo interattivo",
+    "description": "Esperimenti, tecnologia, spazio, corpo umano e installazioni da manipolare.\n              La Cité des enfants è pensata per la fascia 5–12 anni e richiede\n              normalmente una fascia oraria dedicata.",
+    "tags": [
+      "Mezza giornata",
+      "5–12 anni",
+      "Prenotare"
+    ],
+    "lat": 48.8956,
+    "lon": 2.3881,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+des+Sciences+et+de+l%27Industrie+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.cite-sciences.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "jardin-du-dragon",
+    "name": "Jardin du Dragon",
+    "subtitle": "Parc de la Villette · Playground",
+    "description": "Il grande drago-scivolo della Villette è una delle aree gioco più riconoscibili\n              di Parigi. Da combinare con la Cité des Sciences, la Géode e il canale.",
+    "tags": [
+      "Gratis",
+      "Grande scivolo",
+      "All’aperto"
+    ],
+    "lat": 48.8897,
+    "lon": 2.3895,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jardin+du+Dragon+Parc+de+la+Villette+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito del parco",
+        "url": "https://www.lavillette.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "climbing-district-s-vres-lecourbe",
+    "name": "Climbing District Sèvres-Lecourbe",
+    "subtitle": "Paris 15e · Arrampicata indoor",
+    "description": "Arrampicata con corda in una ex chiesa, vicino alla Tour Eiffel.\n              È una bella attività sportiva anche in caso di pioggia. Per Arturo\n              conviene verificare e prenotare una sessione o un corso adatto alla sua età.",
+    "tags": [
+      "Indoor",
+      "Corso consigliato",
+      "Prenotare"
+    ],
+    "lat": 48.8459,
+    "lon": 2.3078,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Climbing+District+S%C3%A8vres-Lecourbe+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://climbingdistrict.com/salle-escalade/paris-15-sevres-lecourbe/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "vasion-verte",
+    "name": "Évasion Verte",
+    "subtitle": "Parc Floral · Percorso tra gli alberi",
+    "description": "Percorsi acrobatici tra gli alberi, ponti sospesi e passaggi in altezza\n              dentro il Parc Floral. È l’opzione più avventurosa della guida;\n              controllate disponibilità e requisiti prima di partire.",
+    "tags": [
+      "Avventura",
+      "All’aperto",
+      "Verificare apertura"
+    ],
+    "lat": 48.8395,
+    "lon": 2.4384,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=%C3%89vasion+Verte+Parc+Floral+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Parc Floral",
+        "url": "https://www.parcfloraldeparis.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "ballon-generali-de-paris",
+    "name": "Ballon Generali de Paris",
+    "subtitle": "Parc André-Citroën · Vista panoramica",
+    "description": "Una mongolfiera vincolata che sale sopra Parigi. Il volo dipende dal vento:\n              è meglio controllare il sito la mattina stessa. Arturo paga la tariffa\n              bambini da 3 a 11 anni.",
+    "tags": [
+      "15 € bambino",
+      "20 € adulto",
+      "Dipende dal vento"
+    ],
+    "lat": 48.8414,
+    "lon": 2.274,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Ballon+Generali+de+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e stato dei voli",
+        "url": "https://ballondeparis.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "parc-zoologique-de-paris",
+    "name": "Parc Zoologique de Paris",
+    "subtitle": "Bois de Vincennes · Animali",
+    "description": "Un grande zoo organizzato per biozone. Durante il vostro soggiorno\n              è aperto fino alle 19:30; il 13 agosto è prevista un’apertura straordinaria\n              serale. Può diventare una giornata completa con il Bois de Vincennes.",
+    "tags": [
+      "17 € bambini 3–12",
+      "22 € adulti",
+      "3–4 ore"
+    ],
+    "lat": 48.8333,
+    "lon": 2.4144,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Parc+Zoologique+de+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.parczoologiquedeparis.fr/fr",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "ping-pong-giochi-e-velieri",
+    "name": "Ping pong, giochi e velieri",
+    "subtitle": "Jardin du Luxembourg · Vicino a casa",
+    "description": "La vostra base quotidiana: tavoli da ping pong, grandi spazi,\n              area gioco e le barchette nel bacino centrale. Ideale per iniziare\n              o chiudere una giornata senza organizzazione.",
+    "tags": [
+      "Gratis",
+      "Vicino a casa",
+      "Sempre utile"
+    ],
+    "lat": 48.8462,
+    "lon": 2.3372,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jardin+du+Luxembourg+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Informazioni",
+        "url": "https://jardin.senat.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "cercare-gli-space-invaders",
+    "name": "Cercare gli Space Invaders",
+    "subtitle": "Città intera · Caccia al tesoro",
+    "description": "Trasformate le passeggiate in una caccia ai piccoli mosaici ispirati\n              al videogioco Space Invaders, disseminati sui muri di Parigi.\n              Non richiede deviazioni e rende più divertenti anche i tragitti degli adulti.",
+    "tags": [
+      "Gratis",
+      "Durante le passeggiate",
+      "Caccia al tesoro"
+    ],
+    "lat": 48.8566,
+    "lon": 2.3522,
+    "links": [
+      {
+        "label": "Cerca sulla mappa",
+        "url": "https://www.google.com/maps/search/?api=1&query=Space+Invader+Paris+street+art",
+        "kind": "maps"
+      },
+      {
+        "label": "Progetto Invader",
+        "url": "https://www.space-invaders.com/world/paris/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "battello-sulla-senna",
+    "name": "Battello sulla Senna",
+    "subtitle": "Senna · Esperienza rilassante",
+    "description": "Un’ora sul fiume è una pausa efficace dopo molte camminate:\n              Arturo si riposa senza annoiarsi e voi vedete la città da un punto\n              di vista diverso. Meglio al tramonto o nelle prime ore della sera.",
+    "tags": [
+      "Circa 1 ora",
+      "Adatto a tutti",
+      "Tramonto"
+    ],
+    "lat": 48.8647,
+    "lon": 2.3062,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bateaux+Mouches+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://www.bateaux-mouches.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "science-exp-riences-bercy-village",
+    "name": "Science Expériences Bercy Village",
+    "subtitle": "Piano B · Pioggia o caldo forte",
+    "description": "Percorso immersivo dedicato a scienza, spazio, natura e tecnologia.\n              È meno “museo” della Cité des Sciences e più esperienza spettacolare,\n              utile come alternativa in caso di maltempo.",
+    "tags": [
+      "Indoor",
+      "1–2 ore",
+      "Piano B"
+    ],
+    "lat": 48.8338,
+    "lon": 2.3864,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Science+Exp%C3%A9riences+Bercy+Village+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito e biglietti",
+        "url": "https://science-experiences.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  }
+]
