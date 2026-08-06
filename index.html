@@ -548,6 +548,93 @@
       font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
     }
 
+
+    /* Vicino a me */
+    .nearby-panel {
+      margin: 18px 0 42px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: 0 7px 24px rgba(0,0,0,.045);
+    }
+
+    .nearby-panel h2 {
+      font-size: clamp(30px, 5vw, 46px);
+    }
+
+    .nearby-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .nearby-note {
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .nearby-results {
+      display: grid;
+      gap: 9px;
+      margin-top: 18px;
+    }
+
+    .nearby-item {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      padding: 14px 15px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: #fafafa;
+    }
+
+    .nearby-item strong {
+      display: block;
+      font-size: 16px;
+      letter-spacing: -.02em;
+    }
+
+    .nearby-item small {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .distance-badge {
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: #ececef;
+      font-size: 12px;
+      font-weight: 750;
+      white-space: nowrap;
+    }
+
+    .nearby-empty {
+      padding: 15px;
+      border-radius: 15px;
+      background: #f3f3f5;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 760px) {
+      .nearby-panel {
+        padding: 18px;
+      }
+      .nearby-item {
+        grid-template-columns: 1fr;
+      }
+      .distance-badge {
+        justify-self: start;
+      }
+    }
+
   </style>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
@@ -596,6 +683,26 @@
         <span class="quick-title">Arturo</span>
       </a>
     </nav>
+
+    <section class="nearby-panel" id="vicino">
+      <p class="section-kicker">Solo quando lo chiedi tu</p>
+      <h2>Vicino a me</h2>
+      <p class="section-note">
+        Tocca il pulsante per usare la posizione una sola volta e vedere i luoghi più vicini.
+        Il sito non continua a seguirti e non salva la tua posizione.
+      </p>
+
+      <div class="nearby-actions">
+        <button class="button" id="nearby-button" type="button">📍 Mostra cosa c’è vicino</button>
+        <button class="button secondary" id="nearby-clear" type="button" hidden>Cancella risultati</button>
+      </div>
+
+      <p class="nearby-note" id="nearby-status" aria-live="polite">
+        La posizione viene richiesta soltanto dopo il tuo tocco.
+      </p>
+
+      <div class="nearby-results" id="nearby-results"></div>
+    </section>
 
     <section id="mostre">
       <div class="section-heading">
@@ -1834,6 +1941,121 @@
         section._parisPlaces = compactCards(section);
         addMapShell(section);
         observer.observe(section);
+      });
+    })();
+  </script>
+
+
+  <script>
+    (() => {
+      const places = [{"title": "Calder. Rêver en équilibre", "category": "Mostre", "label": "Fondation Louis Vuitton · Bois de Boulogne", "lat": 48.8767, "lon": 2.2634, "maps": "https://www.google.com/maps/search/?api=1&query=Fondation+Louis+Vuitton+Paris"}, {"title": "Exposition Générale", "category": "Mostre", "label": "Fondation Cartier · Palais-Royal", "lat": 48.8637, "lon": 2.3365, "maps": "https://www.google.com/maps/search/?api=1&query=Fondation+Cartier+2+Place+du+Palais-Royal+Paris"}, {"title": "Raymond Hains. L’œuvre en chantier", "category": "Mostre", "label": "Fondation Cartier · Galerie Valois", "lat": 48.864, "lon": 2.3372, "maps": "https://www.google.com/maps/search/?api=1&query=Fondation+Cartier+Galerie+Valois+Paris"}, {"title": "Clair-obscur", "category": "Mostre", "label": "Bourse de Commerce · Pinault Collection", "lat": 48.8629, "lon": 2.3426, "maps": "https://www.google.com/maps/search/?api=1&query=Bourse+de+Commerce+Pinault+Collection+Paris"}, {"title": "Hilma af Klint. Les peintures du Temple", "category": "Mostre", "label": "Grand Palais", "lat": 48.8661, "lon": 2.3125, "maps": "https://www.google.com/maps/search/?api=1&query=Grand+Palais+Paris"}, {"title": "Grand Palais d’été 2026", "category": "Mostre", "label": "Grand Palais · Nef", "lat": 48.8661, "lon": 2.3125, "maps": "https://www.google.com/maps/search/?api=1&query=Grand+Palais+Paris"}, {"title": "Programma estivo 2026", "category": "Mostre", "label": "Palais de Tokyo", "lat": 48.8641, "lon": 2.2966, "maps": "https://www.google.com/maps/search/?api=1&query=Palais+de+Tokyo+Paris"}, {"title": "Una giornata nel XVIII secolo", "category": "Mostre", "label": "Musée des Arts Décoratifs", "lat": 48.863, "lon": 2.3338, "maps": "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e+des+Arts+D%C3%A9coratifs+Paris"}, {"title": "La Mode en majesté", "category": "Mostre", "label": "Musée des Arts Décoratifs", "lat": 48.863, "lon": 2.3338, "maps": "https://www.google.com/maps/search/?api=1&query=Mus%C3%A9e+des+Arts+D%C3%A9coratifs+Paris"}, {"title": "Fragile beauté", "category": "Mostre", "label": "Jeu de Paume · Tuileries", "lat": 48.8659, "lon": 2.3231, "maps": "https://www.google.com/maps/search/?api=1&query=Jeu+de+Paume+Paris"}, {"title": "Madeleine de Sinéty. Une vie", "category": "Mostre", "label": "Jeu de Paume · Tuileries", "lat": 48.8659, "lon": 2.3231, "maps": "https://www.google.com/maps/search/?api=1&query=Jeu+de+Paume+Paris"}, {"title": "Miznon", "category": "Food", "label": "Marais · Pranzo veloce", "lat": 48.8573, "lon": 2.3592, "maps": "https://www.google.com/maps/search/?api=1&query=Miznon+22+Rue+des+Ecouffes+Paris"}, {"title": "L’As du Fallafel", "category": "Food", "label": "Marais · Pranzo veloce", "lat": 48.857, "lon": 2.3591, "maps": "https://www.google.com/maps/search/?api=1&query=L%27As+du+Fallafel+34+Rue+des+Rosiers+Paris"}, {"title": "Marché des Enfants Rouges", "category": "Food", "label": "Marais · Mercato coperto", "lat": 48.8632, "lon": 2.3611, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+des+Enfants+Rouges+Paris"}, {"title": "Breizh Café", "category": "Food", "label": "Marais · Pranzo", "lat": 48.8614, "lon": 2.362, "maps": "https://www.google.com/maps/search/?api=1&query=Breizh+Caf%C3%A9+Marais+Paris"}, {"title": "Kodawari Ramen Yokocho", "category": "Food", "label": "Saint-Germain · Pranzo o cena", "lat": 48.8544, "lon": 2.3378, "maps": "https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Yokocho+29+Rue+Mazarine+Paris"}, {"title": "Kodawari Ramen Tsukiji", "category": "Food", "label": "Palais-Royal · Pranzo o cena", "lat": 48.8646, "lon": 2.3363, "maps": "https://www.google.com/maps/search/?api=1&query=Kodawari+Ramen+Tsukiji+12+Rue+de+Richelieu+Paris"}, {"title": "Les Antiquaires", "category": "Food", "label": "Musée d’Orsay · Bistrot", "lat": 48.8572, "lon": 2.3259, "maps": "https://www.google.com/maps/search/?api=1&query=Les+Antiquaires+13+Rue+du+Bac+Paris"}, {"title": "Bouillon République", "category": "Food", "label": "République · Cena francese", "lat": 48.8652, "lon": 2.3654, "maps": "https://www.google.com/maps/search/?api=1&query=Bouillon+R%C3%A9publique+39+Boulevard+du+Temple+Paris"}, {"title": "Bouillon Pigalle", "category": "Food", "label": "Pigalle · Pranzo o cena", "lat": 48.8824, "lon": 2.336, "maps": "https://www.google.com/maps/search/?api=1&query=Bouillon+Pigalle+22+Boulevard+de+Clichy+Paris"}, {"title": "Bouillon Julien", "category": "Food", "label": "Faubourg Saint-Denis · Cena", "lat": 48.87, "lon": 2.3548, "maps": "https://www.google.com/maps/search/?api=1&query=Bouillon+Julien+16+Rue+du+Faubourg+Saint-Denis+Paris"}, {"title": "Gros Bao", "category": "Food", "label": "Canal Saint-Martin · Pranzo o cena", "lat": 48.8723, "lon": 2.3662, "maps": "https://www.google.com/maps/search/?api=1&query=Gros+Bao+72+Quai+de+Jemmapes+Paris"}, {"title": "Petit Bao Bastille", "category": "Food", "label": "Bastille · Pranzo", "lat": 48.8556, "lon": 2.374, "maps": "https://www.google.com/maps/search/?api=1&query=Petit+Bao+Bastille+10+Rue+Breguet+Paris"}, {"title": "Bleu Bao", "category": "Food", "label": "Saint-Lazare · Pranzo o cena", "lat": 48.876, "lon": 2.3382, "maps": "https://www.google.com/maps/search/?api=1&query=Bleu+Bao+8+Rue+Saint-Lazare+Paris"}, {"title": "Puces de Vanves", "category": "Vintage", "label": "Porte de Vanves · Sabato 8 o domenica 9", "lat": 48.8261, "lon": 2.3064, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Vanves"}, {"title": "Les Puces de Paris Saint-Ouen", "category": "Vintage", "label": "Saint-Ouen · Sabato, domenica o lunedì", "lat": 48.9026, "lon": 2.343, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+Paris+Saint-Ouen"}, {"title": "Paul Bert Serpette", "category": "Vintage", "label": "Saint-Ouen · Design del Novecento", "lat": 48.9035, "lon": 2.3389, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Paul+Bert+Serpette+Saint-Ouen"}, {"title": "Marché Dauphine", "category": "Vintage", "label": "Saint-Ouen · Coperto", "lat": 48.9019, "lon": 2.3434, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Dauphine+Saint-Ouen"}, {"title": "Marché Biron", "category": "Vintage", "label": "Saint-Ouen · Antiquariato di livello", "lat": 48.9025, "lon": 2.341, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Biron+Saint-Ouen"}, {"title": "Marché Vernaison", "category": "Vintage", "label": "Saint-Ouen · Il più antico", "lat": 48.9015, "lon": 2.343, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Vernaison+Saint-Ouen"}, {"title": "Marché Jules Vallès", "category": "Vintage", "label": "Saint-Ouen · Brocante autentica", "lat": 48.9036, "lon": 2.3457, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+Jules+Vall%C3%A8s+Saint-Ouen"}, {"title": "Puces d’Aligre", "category": "Vintage", "label": "Aligre · Martedì–domenica mattina", "lat": 48.8494, "lon": 2.3785, "maps": "https://www.google.com/maps/search/?api=1&query=Puces+d%27Aligre+Paris"}, {"title": "Puces de Montreuil", "category": "Vintage", "label": "Porte de Montreuil · Opzione alternativa", "lat": 48.8554, "lon": 2.415, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+aux+Puces+de+la+Porte+de+Montreuil+Paris"}, {"title": "Marché du livre ancien Georges Brassens", "category": "Vintage", "label": "Libri usati · Weekend", "lat": 48.8313, "lon": 2.2994, "maps": "https://www.google.com/maps/search/?api=1&query=March%C3%A9+du+livre+ancien+Georges+Brassens+Paris"}, {"title": "Avenue Trudaine", "category": "Vintage", "label": "Brocante temporanea · Sabato 8 agosto", "lat": 48.8812, "lon": 2.3415, "maps": "https://www.google.com/maps/search/?api=1&query=Avenue+Trudaine+Paris"}, {"title": "Place de la Madeleine", "category": "Vintage", "label": "Brocante temporanea · 8 e 9 agosto", "lat": 48.8696, "lon": 2.3244, "maps": "https://www.google.com/maps/search/?api=1&query=Place+de+la+Madeleine+Paris"}, {"title": "Cours de Vincennes", "category": "Vintage", "label": "Brocante temporanea · Domenica 9 agosto", "lat": 48.8472, "lon": 2.4073, "maps": "https://www.google.com/maps/search/?api=1&query=Cours+de+Vincennes+Paris"}, {"title": "Jardin d’Acclimatation", "category": "Arturo", "label": "Bois de Boulogne · Parco divertimenti", "lat": 48.8774, "lon": 2.263, "maps": "https://www.google.com/maps/search/?api=1&query=Jardin+d%27Acclimatation+Paris"}, {"title": "Terrain d’aventures Nelson Mandela", "category": "Arturo", "label": "Les Halles · Grande area gioco", "lat": 48.8625, "lon": 2.3469, "maps": "https://www.google.com/maps/search/?api=1&query=Terrain+d%27aventures+Jardin+Nelson+Mandela+Paris"}, {"title": "Paris Plages: bagno e sport", "category": "Arturo", "label": "Bassin de la Villette · Estate 2026", "lat": 48.8868, "lon": 2.3744, "maps": "https://www.google.com/maps/search/?api=1&query=Baignade+Bassin+de+la+Villette+Paris"}, {"title": "Trampolini estivi", "category": "Arturo", "label": "Bassin de la Villette · Salti", "lat": 48.8868, "lon": 2.3744, "maps": "https://www.google.com/maps/search/?api=1&query=Bassin+de+la+Villette+Quai+de+Seine+Paris"}, {"title": "Tyrolienne sopra il bacino", "category": "Arturo", "label": "Bassin de la Villette · Avventura", "lat": 48.8868, "lon": 2.3744, "maps": "https://www.google.com/maps/search/?api=1&query=Bassin+de+la+Villette+Paris"}, {"title": "Cité des Sciences et de l’Industrie", "category": "Arturo", "label": "La Villette · Museo interattivo", "lat": 48.8956, "lon": 2.3881, "maps": "https://www.google.com/maps/search/?api=1&query=Cit%C3%A9+des+Sciences+et+de+l%27Industrie+Paris"}, {"title": "Jardin du Dragon", "category": "Arturo", "label": "Parc de la Villette · Playground", "lat": 48.8897, "lon": 2.3895, "maps": "https://www.google.com/maps/search/?api=1&query=Jardin+du+Dragon+Parc+de+la+Villette+Paris"}, {"title": "Climbing District Sèvres-Lecourbe", "category": "Arturo", "label": "Paris 15e · Arrampicata indoor", "lat": 48.8459, "lon": 2.3078, "maps": "https://www.google.com/maps/search/?api=1&query=Climbing+District+S%C3%A8vres-Lecourbe+Paris"}, {"title": "Évasion Verte", "category": "Arturo", "label": "Parc Floral · Percorso tra gli alberi", "lat": 48.8395, "lon": 2.4384, "maps": "https://www.google.com/maps/search/?api=1&query=%C3%89vasion+Verte+Parc+Floral+Paris"}, {"title": "Ballon Generali de Paris", "category": "Arturo", "label": "Parc André-Citroën · Vista panoramica", "lat": 48.8414, "lon": 2.274, "maps": "https://www.google.com/maps/search/?api=1&query=Ballon+Generali+de+Paris"}, {"title": "Parc Zoologique de Paris", "category": "Arturo", "label": "Bois de Vincennes · Animali", "lat": 48.8333, "lon": 2.4144, "maps": "https://www.google.com/maps/search/?api=1&query=Parc+Zoologique+de+Paris"}, {"title": "Ping pong, giochi e velieri", "category": "Arturo", "label": "Jardin du Luxembourg · Vicino a casa", "lat": 48.8462, "lon": 2.3372, "maps": "https://www.google.com/maps/search/?api=1&query=Jardin+du+Luxembourg+Paris"}, {"title": "Cercare gli Space Invaders", "category": "Arturo", "label": "Città intera · Caccia al tesoro", "lat": 48.8566, "lon": 2.3522, "maps": "https://www.google.com/maps/search/?api=1&query=Space+Invader+Paris+street+art"}, {"title": "Battello sulla Senna", "category": "Arturo", "label": "Senna · Esperienza rilassante", "lat": 48.8647, "lon": 2.3062, "maps": "https://www.google.com/maps/search/?api=1&query=Bateaux+Mouches+Paris"}, {"title": "Science Expériences Bercy Village", "category": "Arturo", "label": "Piano B · Pioggia o caldo forte", "lat": 48.8338, "lon": 2.3864, "maps": "https://www.google.com/maps/search/?api=1&query=Science+Exp%C3%A9riences+Bercy+Village+Paris"}];
+      const button = document.getElementById("nearby-button");
+      const clearButton = document.getElementById("nearby-clear");
+      const status = document.getElementById("nearby-status");
+      const results = document.getElementById("nearby-results");
+
+      function toRadians(value) {
+        return value * Math.PI / 180;
+      }
+
+      function distanceKm(lat1, lon1, lat2, lon2) {
+        const earth = 6371;
+        const dLat = toRadians(lat2 - lat1);
+        const dLon = toRadians(lon2 - lon1);
+        const a =
+          Math.sin(dLat / 2) ** 2 +
+          Math.cos(toRadians(lat1)) *
+          Math.cos(toRadians(lat2)) *
+          Math.sin(dLon / 2) ** 2;
+        return earth * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      }
+
+      function formatDistance(km) {
+        if (km < 1) return `${Math.round(km * 1000)} m`;
+        return `${km.toFixed(1)} km`;
+      }
+
+      function renderNearby(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+
+        const nearest = places
+          .map(place => ({
+            ...place,
+            distance: distanceKm(lat, lon, place.lat, place.lon)
+          }))
+          .sort((a, b) => a.distance - b.distance)
+          .slice(0, 12);
+
+        results.innerHTML = "";
+
+        nearest.forEach(place => {
+          const item = document.createElement("a");
+          item.className = "nearby-item";
+          item.href = place.maps;
+          item.target = "_blank";
+          item.rel = "noopener";
+          item.innerHTML = `
+            <span>
+              <strong>${place.title}</strong>
+              <small>${place.category} · ${place.label}</small>
+            </span>
+            <span class="distance-badge">${formatDistance(place.distance)}</span>
+          `;
+          results.appendChild(item);
+        });
+
+        status.textContent =
+          "Posizione utilizzata una sola volta. Tocca un luogo per aprirlo in Google Maps.";
+        clearButton.hidden = false;
+        button.disabled = false;
+        button.textContent = "📍 Aggiorna i dintorni";
+      }
+
+      function showError(error) {
+        let message = "Non riesco a leggere la posizione.";
+        if (error.code === 1) message = "Permesso posizione non concesso. Puoi abilitarlo nelle impostazioni del browser.";
+        if (error.code === 2) message = "Posizione momentaneamente non disponibile.";
+        if (error.code === 3) message = "La richiesta della posizione ha impiegato troppo tempo.";
+        status.textContent = message;
+        button.disabled = false;
+        button.textContent = "📍 Riprova";
+      }
+
+      button?.addEventListener("click", () => {
+        if (!navigator.geolocation) {
+          status.textContent = "Questo browser non supporta la geolocalizzazione.";
+          return;
+        }
+
+        button.disabled = true;
+        button.textContent = "Ricerca in corso…";
+        status.textContent = "Sto chiedendo al telefono la posizione attuale…";
+
+        navigator.geolocation.getCurrentPosition(
+          renderNearby,
+          showError,
+          {
+            enableHighAccuracy: false,
+            timeout: 10000,
+            maximumAge: 120000
+          }
+        );
+      });
+
+      clearButton?.addEventListener("click", () => {
+        results.innerHTML = "";
+        clearButton.hidden = true;
+        status.textContent = "Risultati cancellati. La tua posizione non è stata salvata.";
+        button.textContent = "📍 Mostra cosa c’è vicino";
+      });
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          status.textContent = results.children.length
+            ? "L’app è in pausa. Non è attivo alcun tracciamento continuo."
+            : "La posizione viene richiesta soltanto dopo il tuo tocco.";
+        }
       });
     })();
   </script>
