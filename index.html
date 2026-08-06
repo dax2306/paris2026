@@ -524,14 +524,33 @@
       }
     }
 
+
+    .paris-pin-shell {
+      background: transparent;
+      border: 0;
+    }
+
+    .paris-pin {
+      display: grid;
+      place-items: center;
+      width: 30px;
+      height: 30px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      background: var(--pin-color);
+      color: #fff;
+      box-shadow: 0 3px 9px rgba(0,0,0,.28);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .leaflet-container {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    }
+
   </style>
 
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIINfQ3ynH7tAJo2fumRkMZx1A7zYcL0w0o="
-    crossorigin=""
-  >
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
 
 </head>
 
@@ -1652,40 +1671,34 @@
     <a href="#arturo"><span>🧗</span>Arturo</a>
   </nav>
 
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin="">
-  </script>
-
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
   <script>
     (() => {
+      const coordinates = {"Calder. Rêver en équilibre": [48.8767, 2.2634], "Exposition Générale": [48.8637, 2.3365], "Raymond Hains. L’œuvre en chantier": [48.864, 2.3372], "Clair-obscur": [48.8629, 2.3426], "Hilma af Klint. Les peintures du Temple": [48.8661, 2.3125], "Grand Palais d’été 2026": [48.8661, 2.3125], "Programma estivo 2026": [48.8641, 2.2966], "Una giornata nel XVIII secolo": [48.863, 2.3338], "La Mode en majesté": [48.863, 2.3338], "Fragile beauté": [48.8659, 2.3231], "Madeleine de Sinéty. Une vie": [48.8659, 2.3231], "Miznon": [48.8573, 2.3592], "L’As du Fallafel": [48.857, 2.3591], "Marché des Enfants Rouges": [48.8632, 2.3611], "Breizh Café": [48.8614, 2.362], "Kodawari Ramen Yokocho": [48.8544, 2.3378], "Kodawari Ramen Tsukiji": [48.8646, 2.3363], "Les Antiquaires": [48.8572, 2.3259], "Bouillon République": [48.8652, 2.3654], "Bouillon Pigalle": [48.8824, 2.336], "Bouillon Julien": [48.87, 2.3548], "Gros Bao": [48.8723, 2.3662], "Petit Bao Bastille": [48.8556, 2.374], "Bleu Bao": [48.876, 2.3382], "Puces de Vanves": [48.8261, 2.3064], "Les Puces de Paris Saint-Ouen": [48.9026, 2.343], "Paul Bert Serpette": [48.9035, 2.3389], "Marché Dauphine": [48.9019, 2.3434], "Marché Biron": [48.9025, 2.341], "Marché Vernaison": [48.9015, 2.343], "Marché Jules Vallès": [48.9036, 2.3457], "Puces d’Aligre": [48.8494, 2.3785], "Puces de Montreuil": [48.8554, 2.415], "Marché du livre ancien Georges Brassens": [48.8313, 2.2994], "Avenue Trudaine": [48.8812, 2.3415], "Place de la Madeleine": [48.8696, 2.3244], "Cours de Vincennes": [48.8472, 2.4073], "Jardin d’Acclimatation": [48.8774, 2.263], "Terrain d’aventures Nelson Mandela": [48.8625, 2.3469], "Paris Plages: bagno e sport": [48.8868, 2.3744], "Trampolini estivi": [48.8868, 2.3744], "Tyrolienne sopra il bacino": [48.8868, 2.3744], "Cité des Sciences et de l’Industrie": [48.8956, 2.3881], "Jardin du Dragon": [48.8897, 2.3895], "Climbing District Sèvres-Lecourbe": [48.8459, 2.3078], "Évasion Verte": [48.8395, 2.4384], "Ballon Generali de Paris": [48.8414, 2.274], "Parc Zoologique de Paris": [48.8333, 2.4144], "Ping pong, giochi e velieri": [48.8462, 2.3372], "Cercare gli Space Invaders": [48.8566, 2.3522], "Battello sulla Senna": [48.8647, 2.3062], "Science Expériences Bercy Village": [48.8338, 2.3864]};
       const sectionIds = ["mostre", "food", "vintage", "arturo"];
-      const geocodeCacheKey = "paris2026_geocode_v1";
-      let geocodeCache = {};
+      const sectionColors = {
+        mostre: "#7057d9",
+        food: "#d4552d",
+        vintage: "#35745a",
+        arturo: "#2376c9"
+      };
 
-      try {
-        geocodeCache = JSON.parse(localStorage.getItem(geocodeCacheKey) || "{}");
-      } catch (_) {
-        geocodeCache = {};
-      }
-
-      const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-      let lastRequestAt = 0;
-
-      function googleQueryFromLink(link) {
-        if (!link) return "";
-        try {
-          const url = new URL(link.href);
-          return url.searchParams.get("query") || "";
-        } catch (_) {
-          return "";
-        }
+      function getMapLink(article) {
+        return [...article.querySelectorAll('a[href*="google.com/maps"]')][0]?.href || "";
       }
 
       function compactCards(section) {
         const cardsContainer = section.querySelector(".cards");
-        if (!cardsContainer || cardsContainer.dataset.compacted === "yes") return [];
+        if (!cardsContainer || cardsContainer.dataset.compacted === "yes") {
+          return [...section.querySelectorAll("details.place")].map(details => {
+            const article = details.querySelector("article.card");
+            return {
+              title: details.querySelector(".place-summary-text strong")?.textContent.trim() || "",
+              label: article?.querySelector(".card-label")?.textContent.trim() || "",
+              mapsHref: article ? getMapLink(article) : ""
+            };
+          });
+        }
 
         const articles = [...cardsContainer.querySelectorAll(":scope > article.card")];
         const places = [];
@@ -1694,10 +1707,7 @@
           const title = article.querySelector("h3")?.textContent.trim() || `Luogo ${index + 1}`;
           const label = article.querySelector(".card-label")?.textContent.trim() || "";
           const tags = [...article.querySelectorAll(".tag")].map(el => el.textContent.trim());
-          const mapsLink = [...article.querySelectorAll("a")].find(a =>
-            a.href.includes("google.com/maps")
-          );
-          const query = googleQueryFromLink(mapsLink);
+          const mapsHref = getMapLink(article);
 
           const details = document.createElement("details");
           details.className = "place";
@@ -1717,8 +1727,7 @@
 
           details.append(summary, body);
           cardsContainer.appendChild(details);
-
-          places.push({ title, label, tags, mapsLink, query });
+          places.push({ title, label, mapsHref });
         });
 
         articles.forEach(article => {
@@ -1731,67 +1740,41 @@
       }
 
       function addMapShell(section) {
-        const existing = section.querySelector(".section-map-wrap");
-        if (existing) return existing;
+        let wrap = section.querySelector(".section-map-wrap");
+        if (wrap) return wrap;
 
         const heading = section.querySelector(".section-heading");
-        const wrap = document.createElement("div");
+        wrap = document.createElement("div");
         wrap.className = "section-map-wrap";
         wrap.innerHTML = `
           <div class="section-map" id="map-${section.id}" aria-label="Mappa della sezione"></div>
-          <p class="map-status">La mappa si carica quando apri questa sezione. I punti compaiono progressivamente.</p>
+          <p class="map-status">Mappa con punti già incorporati nel sito.</p>
         `;
         heading.insertAdjacentElement("afterend", wrap);
         return wrap;
       }
 
-      async function geocode(query) {
-        if (!query) return null;
-        if (geocodeCache[query]) return geocodeCache[query];
-
-        const elapsed = Date.now() - lastRequestAt;
-        if (elapsed < 1100) await sleep(1100 - elapsed);
-        lastRequestAt = Date.now();
-
-        try {
-          const endpoint = new URL("https://nominatim.openstreetmap.org/search");
-          endpoint.searchParams.set("q", query);
-          endpoint.searchParams.set("format", "jsonv2");
-          endpoint.searchParams.set("limit", "1");
-          endpoint.searchParams.set("countrycodes", "fr");
-
-          const response = await fetch(endpoint, {
-            headers: { "Accept-Language": "fr,it;q=0.9,en;q=0.8" }
-          });
-          if (!response.ok) return null;
-
-          const result = await response.json();
-          if (!result.length) return null;
-
-          const point = {
-            lat: Number(result[0].lat),
-            lon: Number(result[0].lon),
-            display: result[0].display_name
-          };
-
-          geocodeCache[query] = point;
-          localStorage.setItem(geocodeCacheKey, JSON.stringify(geocodeCache));
-          return point;
-        } catch (_) {
-          return null;
-        }
+      function markerIcon(color, number) {
+        return L.divIcon({
+          className: "paris-pin-shell",
+          html: `<span class="paris-pin" style="--pin-color:${color}">${number}</span>`,
+          iconSize: [32, 32],
+          iconAnchor: [16, 16],
+          popupAnchor: [0, -17]
+        });
       }
 
-      async function buildMap(section, places) {
+      function buildMap(section, places) {
         if (section.dataset.mapBuilt === "yes" || !window.L) return;
         section.dataset.mapBuilt = "yes";
 
-        const mapNode = section.querySelector(".section-map");
+        const node = section.querySelector(".section-map");
         const status = section.querySelector(".map-status");
+        const color = sectionColors[section.id] || "#246bfd";
 
-        const map = L.map(mapNode, {
+        const map = L.map(node, {
           scrollWheelZoom: false,
-          tap: true
+          zoomControl: true
         }).setView([48.8566, 2.3522], 12);
 
         L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -1800,55 +1783,55 @@
         }).addTo(map);
 
         const bounds = [];
-        let loaded = 0;
+        let plotted = 0;
 
-        for (const place of places) {
-          status.textContent = `Caricamento punti: ${loaded}/${places.length}…`;
-          const point = await geocode(place.query || `${place.title}, Paris, France`);
-          if (!point) continue;
+        places.forEach((place, index) => {
+          const point = coordinates[place.title];
+          if (!point) return;
 
-          loaded += 1;
-          bounds.push([point.lat, point.lon]);
+          plotted += 1;
+          bounds.push(point);
 
-          const mapsHref = place.mapsLink?.href || 
+          const marker = L.marker(point, {
+            icon: markerIcon(color, plotted)
+          }).addTo(map);
+
+          const mapLink = place.mapsHref ||
             `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(place.title + " Paris")}`;
 
-          const marker = L.marker([point.lat, point.lon]).addTo(map);
           marker.bindPopup(`
             <p class="map-popup-title">${place.title}</p>
             <p class="map-popup-meta">${place.label || ""}</p>
-            <a class="map-popup-link" href="${mapsHref}" target="_blank" rel="noopener">
+            <a class="map-popup-link" href="${mapLink}" target="_blank" rel="noopener">
               Apri in Google Maps
             </a>
           `);
-        }
+        });
 
         if (bounds.length) {
-          map.fitBounds(bounds, { padding: [28, 28], maxZoom: 15 });
-          status.textContent = `${loaded} luoghi visualizzati. Tocca un indicatore per aprire la scheda.`;
+          map.fitBounds(bounds, { padding: [30, 30], maxZoom: 14 });
+          status.textContent = `${plotted} luoghi sulla mappa · tocca un numero per i dettagli`;
           status.classList.add("is-ready");
         } else {
-          status.textContent = "La mappa non è riuscita a localizzare i luoghi. Le schede e i pulsanti Google Maps restano disponibili.";
+          status.textContent = "Nessun punto disponibile; usa i collegamenti Google Maps nelle schede.";
         }
 
-        setTimeout(() => map.invalidateSize(), 200);
+        setTimeout(() => map.invalidateSize(), 150);
       }
 
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) return;
           const section = entry.target;
-          const places = section._parisPlaces || [];
-          buildMap(section, places);
+          buildMap(section, section._parisPlaces || []);
           observer.unobserve(section);
         });
-      }, { rootMargin: "350px 0px" });
+      }, { rootMargin: "250px 0px" });
 
       sectionIds.forEach(id => {
         const section = document.getElementById(id);
         if (!section) return;
-        const places = compactCards(section);
-        section._parisPlaces = places;
+        section._parisPlaces = compactCards(section);
         addMapShell(section);
         observer.observe(section);
       });
