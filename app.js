@@ -1,5 +1,5 @@
 
-const categories = ["mostre","food","vintage","arturo"];
+const categories = ["mostre","food","vintage","arturo","shopping"];
 const data = {};
 const maps = {};
 const layers = {};

@@ -1,0 +1,585 @@
+[
+  {
+    "id": "sezane-marais",
+    "name": "Sézane – L’Appartement Marais",
+    "subtitle": "33 rue des Blancs Manteaux · Moda francese",
+    "description": "Una delle boutique Sézane più piacevoli da inserire nel giro del Marais: collezione donna, accessori, pelletteria e Art de Vivre.",
+    "tags": [
+      "Moda",
+      "€€€",
+      "Marais",
+      "Da non perdere"
+    ],
+    "lat": 48.8597,
+    "lon": 2.3577,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sezane+33+Rue+des+Blancs+Manteaux+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.sezane.com/fr-fr/nos-adresses/appartement-paris-4",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "soeur",
+    "name": "Soeur",
+    "subtitle": "12 boulevard des Filles du Calvaire · Moda",
+    "description": "Linee sobrie, volumi rilassati e bei materiali. Molto vicina allo stile Sézane, ma più minimale.",
+    "tags": [
+      "Moda",
+      "€€€",
+      "Haut-Marais"
+    ],
+    "lat": 48.8617,
+    "lon": 2.3665,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Soeur+12+Boulevard+des+Filles+du+Calvaire+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.soeur.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bash-archives",
+    "name": "Ba&sh",
+    "subtitle": "30 rue des Archives · Moda",
+    "description": "Prêt-à-porter parigino femminile, facile da indossare e leggermente più elegante.",
+    "tags": [
+      "Moda",
+      "€€€",
+      "Marais"
+    ],
+    "lat": 48.8585,
+    "lon": 2.3555,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=ba%26sh+30+Rue+des+Archives+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://ba-sh.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "merci",
+    "name": "Merci Paris",
+    "subtitle": "111 boulevard Beaumarchais · Concept store",
+    "description": "Moda, casa, design, libri e oggetti. Uno dei concept store più interessanti da vedere anche solo per l’atmosfera.",
+    "tags": [
+      "Concept store",
+      "Design",
+      "€€€",
+      "Da non perdere"
+    ],
+    "lat": 48.8607,
+    "lon": 2.3661,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Merci+111+Boulevard+Beaumarchais+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://merci-merci.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "muji-halles",
+    "name": "MUJI Forum des Halles",
+    "subtitle": "Forum des Halles · Design & lifestyle",
+    "description": "Casa, cancelleria, viaggio e abbigliamento essenziale. Comodo da abbinare a Bourse de Commerce e Les Halles.",
+    "tags": [
+      "Design",
+      "Lifestyle",
+      "€€"
+    ],
+    "lat": 48.8624,
+    "lon": 2.3444,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=MUJI+Forum+des+Halles+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.muji.eu/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "uniqlo-marais",
+    "name": "UNIQLO Le Marais",
+    "subtitle": "39 rue des Francs Bourgeois · Basic",
+    "description": "Grande store in posizione comodissima nel Marais, utile per basic e abbigliamento tecnico leggero.",
+    "tags": [
+      "Basic",
+      "€€",
+      "Marais"
+    ],
+    "lat": 48.8578,
+    "lon": 2.361,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=UNIQLO+39+Rue+des+Francs+Bourgeois+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.uniqlo.com/fr/fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "sessun-francs",
+    "name": "Sessùn Francs Bourgeois",
+    "subtitle": "43 rue des Francs Bourgeois · Moda",
+    "description": "Marchio francese con capi femminili molto curati e boutique piacevole da inserire nel giro shopping del Marais.",
+    "tags": [
+      "Moda",
+      "€€€",
+      "Marais"
+    ],
+    "lat": 48.8579,
+    "lon": 2.3612,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Sessun+43+Rue+des+Francs+Bourgeois+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://fr.sessun.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "rouje",
+    "name": "Rouje",
+    "subtitle": "11 bis rue Bachaumont · Moda",
+    "description": "Più rétro e sensuale rispetto a Soeur o Sézane, con un’identità molto parigina.",
+    "tags": [
+      "Moda",
+      "€€€",
+      "Montorgueil"
+    ],
+    "lat": 48.8666,
+    "lon": 2.3454,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Rouje+11+bis+Rue+Bachaumont+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.rouje.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "apc-marais",
+    "name": "A.P.C.",
+    "subtitle": "112 rue Vieille du Temple · Moda minimal",
+    "description": "Minimalismo francese, denim, borse e capi essenziali. Interessante anche per il design degli store.",
+    "tags": [
+      "Moda",
+      "Minimal",
+      "€€€",
+      "Marais"
+    ],
+    "lat": 48.8616,
+    "lon": 2.364,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=A.P.C.+112+Rue+Vieille+du+Temple+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.apc.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "cos-marais",
+    "name": "COS Le Marais",
+    "subtitle": "4 rue des Rosiers · Moda minimal",
+    "description": "Linee pulite e contemporanee, buon contrappunto ai marchi francesi più romantici.",
+    "tags": [
+      "Moda",
+      "Minimal",
+      "€€",
+      "Marais"
+    ],
+    "lat": 48.8573,
+    "lon": 2.3587,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=COS+4+Rue+des+Rosiers+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.cos.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "polene-richelieu",
+    "name": "Polène Richelieu",
+    "subtitle": "69 rue de Richelieu · Borse",
+    "description": "Maroquinerie contemporanea con forme molto riconoscibili. Boutique spesso affollata: meglio andarci non troppo tardi.",
+    "tags": [
+      "Borse",
+      "Accessori",
+      "€€€"
+    ],
+    "lat": 48.869,
+    "lon": 2.3371,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Polene+69+Rue+de+Richelieu+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.polene-paris.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bobbies-marais",
+    "name": "Bobbies Marais",
+    "subtitle": "123 rue Vieille du Temple · Scarpe",
+    "description": "Scarpe e pelletteria disegnate a Parigi, con una boutique contemporanea nel Marais.",
+    "tags": [
+      "Scarpe",
+      "Accessori",
+      "€€€",
+      "Marais"
+    ],
+    "lat": 48.8619,
+    "lon": 2.3646,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Bobbies+123+Rue+Vieille+du+Temple+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.bobbies.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "carel-madeleine",
+    "name": "Carel Paris – Madeleine",
+    "subtitle": "2 rue Tronchet · Scarpe",
+    "description": "Mary Jane, ballerine e scarpe dal gusto rétro francese. Un classico tornato molto attuale.",
+    "tags": [
+      "Scarpe",
+      "€€€",
+      "Madeleine"
+    ],
+    "lat": 48.8705,
+    "lon": 2.3259,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Carel+2+Rue+Tronchet+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.carel.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "jonak-archives",
+    "name": "Jonak",
+    "subtitle": "29 rue des Archives · Scarpe",
+    "description": "Alternativa più accessibile per scarpe e sandali, con uno store molto comodo nel Marais.",
+    "tags": [
+      "Scarpe",
+      "€€",
+      "Marais"
+    ],
+    "lat": 48.8584,
+    "lon": 2.3558,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Jonak+29+Rue+des+Archives+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.jonak.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "fleux",
+    "name": "Fleux'",
+    "subtitle": "39 rue Sainte-Croix de la Bretonnerie · Design",
+    "description": "Oggetti, illuminazione, arredo e regali. Uno dei posti più divertenti se vi interessa il design accessibile.",
+    "tags": [
+      "Design",
+      "Casa",
+      "€€",
+      "Marais"
+    ],
+    "lat": 48.858,
+    "lon": 2.3558,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Fleux+39+Rue+Sainte-Croix+de+la+Bretonnerie+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.fleux.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "empreintes",
+    "name": "Empreintes",
+    "subtitle": "5 rue de Picardie · Artigianato & design",
+    "description": "Concept store dedicato ai créateurs e métiers d’art francesi: ceramica, vetro, gioielli e oggetti.",
+    "tags": [
+      "Design",
+      "Artigianato",
+      "€€€",
+      "Haut-Marais"
+    ],
+    "lat": 48.862,
+    "lon": 2.3606,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Empreintes+5+Rue+de+Picardie+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.empreintes-paris.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "buly-bonaparte",
+    "name": "Officine Universelle Buly",
+    "subtitle": "6 rue Bonaparte · Beauty & interiors",
+    "description": "Profumi, cosmetica, calligrafia e un interno spettacolare. Vale la visita anche soltanto per l’allestimento.",
+    "tags": [
+      "Beauty",
+      "Design",
+      "€€€",
+      "Da non perdere"
+    ],
+    "lat": 48.8561,
+    "lon": 2.3358,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Officine+Universelle+Buly+6+Rue+Bonaparte+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://buly1803.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "ohmycream-francs",
+    "name": "Oh My Cream!",
+    "subtitle": "48 rue des Francs Bourgeois · Beauty",
+    "description": "Concept store dedicato alla beauty contemporanea e indipendente; facilissimo da inserire nel giro del Marais.",
+    "tags": [
+      "Beauty",
+      "€€€",
+      "Marais"
+    ],
+    "lat": 48.8579,
+    "lon": 2.3616,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Oh+My+Cream+48+Rue+des+Francs+Bourgeois+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.ohmycream.com/pages/boutiques/1000?id=francs+bourgeois",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "centre-commercial",
+    "name": "Centre Commercial",
+    "subtitle": "2 rue de Marseille · Concept store",
+    "description": "Concept store dei fondatori di VEJA, con moda uomo/donna e lifestyle selezionati con attenzione a materiali e produzione.",
+    "tags": [
+      "Concept store",
+      "Moda",
+      "€€€",
+      "Canal Saint-Martin"
+    ],
+    "lat": 48.8706,
+    "lon": 2.363,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Centre+Commercial+2+Rue+de+Marseille+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.centrecommercial.cc/en/content/10-boutique-centre-commercial",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "nose",
+    "name": "Nose",
+    "subtitle": "20 rue Bachaumont · Profumeria",
+    "description": "Profumeria di nicchia molto curata, ideale se vi piacciono fragranze meno mainstream e consulenza personalizzata.",
+    "tags": [
+      "Beauty",
+      "Profumi",
+      "€€€",
+      "Montorgueil"
+    ],
+    "lat": 48.8669,
+    "lon": 2.3453,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Nose+20+Rue+Bachaumont+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://noseparis.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "galignani",
+    "name": "Librairie Galignani",
+    "subtitle": "224 rue de Rivoli · Libri",
+    "description": "Storica libreria internazionale, bellissima sosta tra Tuileries, Louvre e Palais Royal.",
+    "tags": [
+      "Libri",
+      "Cultura",
+      "€€"
+    ],
+    "lat": 48.8652,
+    "lon": 2.3288,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Galignani+224+Rue+de+Rivoli+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.galignani.fr/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  },
+  {
+    "id": "bon-marche",
+    "name": "Le Bon Marché Rive Gauche",
+    "subtitle": "24 rue de Sèvres · Department store",
+    "description": "Grande magazzino elegante ma piacevole da esplorare: moda, design, beauty e La Grande Épicerie nello stesso giro.",
+    "tags": [
+      "Department store",
+      "Design",
+      "€€€",
+      "Rive Gauche"
+    ],
+    "lat": 48.8513,
+    "lon": 2.3245,
+    "links": [
+      {
+        "label": "Google Maps",
+        "url": "https://www.google.com/maps/search/?api=1&query=Le+Bon+Marche+24+Rue+de+Sevres+Paris",
+        "kind": "maps"
+      },
+      {
+        "label": "Sito",
+        "url": "https://www.lebonmarche.com/",
+        "kind": "site"
+      }
+    ],
+    "tested": false
+  }
+]
